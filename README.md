@@ -1,115 +1,133 @@
 # Red-Tinkuy
 
 > **Donde las iniciativas se encuentran y multiplican.**  
-> Una plataforma web para que las organizaciones juveniles lideradas por mujeres se comuniquen, se financien y se organicen en un solo lugar.
+> Plataforma web para que las organizaciones y colectivas juveniles lideradas por mujeres se visibilicen, se financien y se articulen en un solo lugar.
 
-**Warmi Innovathon 2026** · Reto de la ONG · **Equipo:** Red Tinkuy · **Demo:** [red-tinkuy.vercel.app](https://red-tinkuy.vercel.app)
+**Warmi Innovathon 2026** · **Grupo 9** · **Demo en Producción:** [red-tinkuy.vercel.app](https://red-tinkuy.vercel.app)
 
-*Evento organizado por **Lead at Ulima** y **Makipuray**, con la **ONG Ubuntu** como autora del reto y **GitHub** como aliado técnico.*
-
----
-
-## 📌 El problema
-
-En el Perú, decenas de colectivas comunitarias y organizaciones juveniles lideradas por mujeres trabajan de forma aislada, dependiendo de herramientas fragmentadas: grupos de WhatsApp saturados, correos que nadie responde, formularios manuales y publicaciones efímeras en redes sociales. 
-
-Esta desconexión genera tres barreras críticas:
-1. **Pérdida de alcance y visibilidad:** Sus actividades y convocatorias no llegan más allá de su círculo inmediato de contactos.
-2. **Brecha de financiamiento y formalidad:** Carecen de canales auditables para recaudar micro-donaciones y quedan descalificadas de fondos corporativos o de cooperación internacional por no contar con RUC o personería jurídica consolidada.
-3. **Descoordinación de agendas:** Se cruzan talleres y asambleas entre organizaciones con objetivos afines, duplicando esfuerzos y agotando a sus lideresas.
-
-### 📊 Lo que escuchamos (Validación de campo)
-Aplicamos una encuesta a **20 lideresas y miembros de organizaciones juveniles** (principalmente en Lima y Junín), obteniendo los siguientes hallazgos clave:
-* **85%** coordina sus actividades únicamente por mensajería instantánea, perdiendo convocatorias, actas y acuerdos importantes.
-* **90%** reporta dificultades críticas para financiar sus eventos y depende de aportes personales o rifas sin trazabilidad para donantes externos.
-* **75%** no postula a fondos institucionales por trabas burocráticas y falta de alianzas con ONGs de mayor trayectoria.
+*Evento organizado por **Lead at Ulima** y **Makipuray**, con **GitHub** como aliado técnico.*
 
 ---
 
-## 💡 Nuestra solución
+## 📌 Contexto de la Problemática
 
-**Red Tinkuy** es una plataforma web integral, ligera y pensada especialmente para lideresas de organizaciones pequeñas que acceden principalmente desde el celular:
+En el Perú, las mujeres constituyen la base de la participación ciudadana juvenil: representan el **61% de los integrantes** de las organizaciones juveniles y ocupan el **53% de las representaciones oficiales** ante la Senaju (Secretaría Nacional de la Juventud, 2022). Además, son la población objetivo del **35.2%** de las organizaciones juveniles del país.
 
-1. **🗺️ Mapa Nacional Interactivo & Directorio Verificado:** Permite georreferenciar a cada organización por región y causa social (igualdad de género, educación, medio ambiente, derechos juveniles), con perfil verificado y enlace directo a WhatsApp.
-2. **💳 Micro-Recaudación Transparente con Juntta:** Módulo de financiamiento colectivo con metas claras, seguimiento de gastos en tiempo real y recaudación directa mediante pasarelas (Yape, Plin y tarjeta) con **cero comisiones retenidas por Red Tinkuy**.
-3. **🤝 Alianzas y Co-postulación asistida por IA:** Motor de emparejamiento que conecta colectivas de base con ONGs formalizadas, permitiéndoles postular en conjunto a fondos corporativos y generando borradores automáticos de convenios de alianza.
-4. **🗓️ Calendario Propio y Cruzado:** Agenda comunitaria compartida que evita cruces de fechas y facilita la asistencia mutua a foros, talleres y asambleas.
-5. **🏢 Portal de Inversión Social (RSE para Empresas):** Espacio B2B para que empresas aliadas canalicen financiamiento a proyectos auditables con impacto medible en las regiones donde operan.
+A pesar de este protagonismo, las iniciativas lideradas por mujeres enfrentan una marcada fragilidad estructural:
 
-### 🎯 ¿Para quién es?
-Lideresas, voluntarias y miembros de organizaciones juveniles del Perú, activas tanto en Lima como en regiones, que necesitan una herramienta intuitiva desde su smartphone sin requerir conocimientos técnicos avanzados.
-
-### 🌟 ¿Qué la hace distinta?
-* **Diseño inclusivo y sin barreras burocráticas:** Permite participar tanto a colectivas no formalizadas como a ONGs constituidas mediante el mecanismo de alianzas estratégicas.
-* **Cumplimiento estricto de la Ley N° 29733 (Protección de Datos Personales):** Consentimiento informado, explícito y auditable en el registro de voluntarias y lideresas.
-* **Arquitectura ultra ligera (Mobile-First):** Carga instantánea en cualquier teléfono móvil, carrusel 3D Coverflow accesible y mapa SVG vectorial sin consumo excesivo de datos móviles.
+1. **Barrera de Formalización Registral (64.4% sin personería jurídica):**  
+   El **64.4% de las organizaciones juveniles no cuenta con inscripción en SUNARP ni RUC** (Senaju, 2022). Los costos notariales y registrales (que oscilan entre S/ 1,000 y S/ 1,500) resultan inaccesibles para colectivas de base y voluntariados.
+2. **Alta Precariedad Financiera:**  
+   El **53% se sostiene exclusivamente con aportes voluntarios** de sus miembros, el **46% recurre a la autogestión** mediante rifas o actividades benéficas, y solo el **3.5% accede a financiamiento estatal** y el **6.3% a fondos de la cooperación internacional** (Senaju, 2022). En la práctica, las lideresas financian el impacto social de su propio bolsillo.
+3. **Brecha Digital en la Gestión de Proyectos:**  
+   Aunque el **91.4% usa chats de WhatsApp** para coordinar, solo el **48.3% utiliza herramientas de organización** (Google Calendar, Trello, Asana) y apenas el **28.9% emplea herramientas interactivas** (Miro, Canva, Padlet). Las organizaciones identifican como necesidades urgentes la capacitación en financiamiento y gestión de recursos (**55.9%**), diseño de proyectos (**41.9%**) y comunicación digital (**33.7%**).
 
 ---
 
-## 🚀 Demo en vivo
+## 📊 Validación de Campo (Nuestra Encuesta)
 
-* **Enlace de Producción:** [https://red-tinkuy.vercel.app](https://red-tinkuy.vercel.app)
-* **Código fuente en GitHub:** [https://github.com/DayelinXiomaa/Red-Tinkuy](https://github.com/DayelinXiomaa/Red-Tinkuy)
+Para validar si el diagnóstico de la Senaju se refleja en el territorio, el **Grupo 9** aplicó una encuesta digital anónima a **20 participantes** (85% mujeres, 50% entre 18 y 22 años, 45% entre 23 y 29 años), con alcance en **Lima (60%), Junín - Huancayo (35%) y Lambayeque (5%)**:
 
-### Pruébala en 3 pasos:
-1. **Explora el Mapa:** Ingresa a la plataforma y filtra por departamentos (ej. Cusco, Lima, Junín) o selecciona una causa para ver las iniciativas en acción.
-2. **Conoce el Financiamiento Juntta:** Revisa la tarjeta de recaudación en vivo de la organización *Warmikuna Puririsun*, con su meta de financiamiento y botón de aporte directo.
-3. **Simula una Alianza Estratégica:** Visita la sección de alianzas para ver cómo la IA detecta sinergias y co-diseña propuestas de financiamiento conjunto.
-
----
-
-## ⚙️ Funcionalidades y Requisitos (Spec-Driven)
-
-Cada funcionalidad responde a un Requisito Funcional (RF) especificado en la arquitectura:
-
-- [x] **RF-01:** Directorio Georreferenciado con Mapa Interactivo Departamental (`specs/001-red-tinkuy/spec.md`)
-- [x] **RF-02:** Módulo de Transparencia y Micro-recaudación con Juntta (`specs/001-red-tinkuy/spec.md`)
-- [x] **RF-03:** Motor de Alianzas y Generación de Convenios con IA (`specs/001-red-tinkuy/spec.md`)
-- [x] **RF-04:** Calendario Cruzado de Actividades y Eventos Nacionales (`specs/001-red-tinkuy/spec.md`)
-- [x] **RF-05:** Formulario de Registro Escalonado con Protección de Datos Ley N° 29733 (`specs/001-red-tinkuy/spec.md`)
-- [x] **RF-06:** Portal Corporativo B2B de Inversión Social y Desafíos RSE (`specs/001-red-tinkuy/spec.md`)
-
-El detalle completo se encuentra documentado en [`specs/001-red-tinkuy/spec.md`](specs/001-red-tinkuy/spec.md).
+| Indicador Evaluado | Resultado | Conclusión / Oportunidad |
+| :--- | :---: | :--- |
+| **Dificultad más crítica:** Conseguir financiamiento | **53%** | Coincide con el diagnóstico nacional (solo 3.5% accede a fondos estatales). |
+| **Principal necesidad:** Conectar con otras organizaciones y lideresas | **50%** | Demanda urgente de un espacio articulador y colaborativo. |
+| **Dificultad:** Comunicarse con autoridades y aliados | **32%** | Brecha resuelta mediante perfiles públicos y cartas formales asistidas. |
+| **Dificultad:** Organizar actividades, tareas y visibilidad | **26%** | Necesidad de calendario propio y mapa nacional de iniciativas. |
+| **Confianza en una plataforma que transparente recursos** | **75%** | La trazabilidad con Juntta genera alta credibilidad en donantes. |
+| **Intención de uso ("Sí, definitivamente")** | **75%** | Alta tracción inicial y validación del problema. |
+| **Intención de uso ("Tal vez, según funcionalidades")** | **25%** | Interés condicionado a funciones concretas. |
+| **Rechazo a la plataforma** | **0%** | **Cero rechazo** en la muestra consultada. |
+| **Funciones calificadas como "Muy útil"** | **70% a 90%** | Respaldo total a los módulos de mapa, Juntta, calendario y alianzas IA. |
 
 ---
 
-## 🛠️ Tecnologías utilizadas
+## 💡 Nuestra Solución: Red Tinkuy
 
-| Área | Herramienta / Tecnología | Justificación técnica |
-|---|---|---|
-| **Frontend** | **HTML5 Semántico + CSS3 Moderno** | Flexbox, CSS Grid, variables CSS fluidas y animaciones nativas sin dependencias pesadas. |
-| **Lógica e Interactividad** | **JavaScript ES6+ (SPA)** | Lógica reactiva en cliente, carrusel 3D Coverflow táctil, cálculo de estados y filtros instantáneos. |
-| **Cartografía** | **SVG Vectorial Interactivo** | Mapa geográfico de los 24 departamentos sin peso de librerías externas para carga móvil rápida. |
-| **Despliegue y Hosting** | **Vercel + GitHub Actions** | Integración continua (CI/CD), despliegue automático ante cada `push` a `main` y CDN con SSL. |
-| **Inteligencia Artificial** | **GitHub Copilot + Modelos Asistentes** | Asistencia en la arquitectura de especificaciones, optimización de código y diseño responsivo. |
-| **Control de Versiones** | **Git & GitHub** | Flujo de trabajo colaborativo mediante Pull Requests, ramas y revisiones de código. |
+**Red Tinkuy** es una plataforma web gratuita, mobile-first, que hace visibles y financiables las iniciativas de lideresas y organizaciones juveniles de mujeres en el Perú. 
+
+> *Tratamos la **conexión como el camino** y el **financiamiento como el resultado**: las organizaciones se encuentran para conseguir aliadas, difusión y recursos.*
+
+### 🛠️ Las 3 Funcionalidades Centrales del Piloto:
+
+1. **🗺️ Mapa Interactivo con Perfil Verificado y Calendario Propio:**  
+   * **Sin exigencia de SUNARP ni RUC:** Elimina la barrera de entrada para el 64.4% de colectivas informales.  
+   * Permite explorar por región o causa social (género, educación, ambiente, derechos).  
+   * Perfil integral con fotos, descripción, proyectos activos y botones directos a WhatsApp, Instagram y Facebook.  
+   * Calendario propio de disponibilidad y badge de *Organización Verificada* mediante actividad reciente y validación comunitaria.
+
+2. **💳 Financiamiento Transparente de Proyectos con Juntta:**  
+   * Cada organización publica sus proyectos con meta, presupuesto desglosado y fecha límite.  
+   * El botón *"Apoyar este proyecto"* redirige directamente a la campaña en **Juntta** (plataforma peruana de donaciones con seguimiento de fondos en tiempo real y soporte para Yape, Plin y tarjetas).  
+   * **Cero retenciones de dinero por Red Tinkuy:** Transparencia bancaria total.  
+   * Al cerrar el proyecto, la organización publica un reporte obligatorio de resultados, rendición de gastos y fotografías.  
+   * Tablón de fondos concursables, becas y convocatorias abiertas de RSE.
+
+3. **🤖 Alianzas y Co-diseño Asistido por Inteligencia Artificial:**  
+   * Motor de sugerencia de organizaciones afines por complementariedad de capacidades y objetivos.  
+   * **Generador de propuestas formales con IA:** Redacta borradores estructurados de convenio que la lideresa revisa antes de enviar.  
+   * **Organizador de horarios cruzados:** Cruza automáticamente los calendarios de ambas organizaciones y muestra los días y horas en que coinciden, acelerando la primera reunión sin cadenas interminables de mensajes.
 
 ---
 
-## 🤖 Uso de IA y originalidad
+## 📈 Impacto Esperado y Metas del Piloto
 
-En **Red Tinkuy** utilizamos Inteligencia Artificial de forma ética y responsable como herramienta de aceleración durante el hackathon:
-* **La IA propone, el equipo decide:** La IA se empleó como apoyo técnico para la redacción de especificaciones, depuración de estilos y optimización del código.
-* **Originalidad:** El concepto, la investigación con lideresas de Lima y Junín, la propuesta de valor social y el modelo de alianza informales-formales para resolver el reto de la **ONG Ubuntu** fueron ideados y validados íntegramente por el equipo.
+### Metas del Piloto (Enero a Marzo 2027):
+* **15 a 20 organizaciones** con perfil verificado de al menos 3 regiones distintas del Perú.
+* **5 proyectos publicados** con campaña activa de financiamiento.
+* **10 propuestas de alianza enviadas** y al menos **3 aceptadas** con fecha de reunión fijada mediante el organizador de horarios.
+* **100% de proyectos cerrados** con reporte de resultados y gastos publicado.
+
+### Proyección a 1 año:
+* **300 lideresas** y **120 colectivos** con perfil activo en la plataforma.
+* **60 proyectos financiados** con aportes de la comunidad y aliados estratégicos.
 
 ---
 
-## 💻 Cómo ejecutar el proyecto localmente
+## 🚀 Demo en Vivo y Enlaces del Proyecto
 
-1. **Clonar el repositorio:**
+* **🌐 Plataforma Desplegada en Producción:** [https://red-tinkuy.vercel.app](https://red-tinkuy.vercel.app)
+* **💻 Repositorio de Código en GitHub:** [https://github.com/DayelinXiomaa/Red-Tinkuy](https://github.com/DayelinXiomaa/Red-Tinkuy)
+* **📊 Resultados de la Encuesta de Validación (Google Sheets):** [Ver Respuestas de la Encuesta](https://docs.google.com/spreadsheets/d/1OJlfehjC0b-ug1I-VOR1IHPcY_05HxLTSIBkmfRNLZ0/edit?usp=sharing)
+* **📑 Presentación del Reto (PPT):** [Ver Diapositivas](https://docs.google.com/presentation/d/1UKEnZAd9tevUqWx9VTQqiTynxKThMpLK/edit?usp=sharing&ouid=102519290134329429480&rtpof=true&sd=true)
+
+---
+
+## 👥 Equipo (Grupo 9)
+
+Equipo multidisciplinario del **Warmi Innovathon 2026**:
+
+| Integrante | Rol en el Proyecto | Responsabilidades Principales | GitHub |
+| :--- | :--- | :--- | :--- |
+| **Dayelin Xiomara** | **Líder de Desarrollo Web** | Desarrollo íntegro de la plataforma web frontend, diseño UI/UX responsivo para celulares, carrusel 3D Coverflow, mapa SVG y despliegue CI/CD en Vercel. | [@DayelinXiomaa](https://github.com/DayelinXiomaa) |
+| **Kely Isabel** | **Investigación de Datos & Diagnóstico** | Análisis estadístico del informe Senaju 2022, diseño y aplicación de la encuesta de campo (20 casos en Lima/Junín) y validación de usuarias. | — |
+| **Raphaela** | **Modelo de Negocios & Alianzas** | Estrategia de sostenibilidad, propuesta de valor, métricas de impacto social (CSAT, retención) y articulación con empresas/aliadas. | — |
+| **Gianluca Talavera** | **Arquitectura Técnica & Costos** | Estimación de presupuesto de desarrollo, costos de infraestructura en la nube, viabilidad técnica y análisis de escalabilidad. | — |
+
+---
+
+## 🛠️ Tecnologías Utilizadas
+
+| Componente | Tecnología | Justificación Técnica |
+| :--- | :--- | :--- |
+| **Frontend** | **HTML5 Semántico + CSS3 Moderno** | Variables CSS nativas, Flexbox, CSS Grid y animaciones fluidas sin frameworks pesados. |
+| **Interactividad** | **JavaScript ES6+ (SPA)** | Lógica reactiva sin recarga de página, carrusel 3D Coverflow interactivo y filtros instantáneos. |
+| **Cartografía** | **SVG Vectorial Interactivo** | Mapa geográfico de los departamentos del Perú con carga ultrarrápida y mínimo consumo de datos móviles. |
+| **Despliegue & CI/CD** | **Vercel + GitHub** | Integración continua automatizada ante cada `push` a `main`, certificado SSL y CDN global. |
+| **Cumplimiento Legal** | **Ley N° 29733 (Perú)** | Consentimiento informado explícito en el registro para el tratamiento ético de datos personales. |
+
+---
+
+## 💻 Cómo Ejecutar el Proyecto Localmente
+
+1. Clonar el repositorio:
    ```bash
    git clone https://github.com/DayelinXiomaa/Red-Tinkuy.git
    cd Red-Tinkuy
    ```
-
-2. **Ejecutar la aplicación:**
-   Al ser una aplicación web estandarizada, puedes abrirla de inmediato de cualquiera de las siguientes formas:
-   * **Opción A (Directa):** Abre el archivo `index.html` en tu navegador favorito haciendo doble clic.
-   * **Opción B (Servidor local ligero con Node.js):**
-     ```bash
-     npx serve .
-     ```
-   * **Opción C (Servidor local con Python):**
+2. Abrir la plataforma:
+   * **Opción Directa:** Abre el archivo `index.html` en tu navegador con doble clic.
+   * **Opción con Servidor Local (Python):**
      ```bash
      python -m http.server 8000
      ```
@@ -117,52 +135,35 @@ En **Red Tinkuy** utilizamos Inteligencia Artificial de forma ética y responsab
 
 ---
 
-## 🏗️ Cómo lo construimos (Spec-Driven Development)
+## 🏗️ Metodología: Spec-Driven Development (SDD)
 
-Seguimos una metodología guiada por especificaciones (**SDD**), asegurando orden desde la formulación del problema hasta la entrega final:
+Seguimos una metodología guiada por especificaciones técnicas:
 
-| Fase | Archivo de referencia |
-|---|---|
-| **Reto de la ONG** | [docs/RETO.md](docs/RETO.md) |
-| **Principios y Constitución** | [docs/constitution.md](docs/constitution.md) |
-| **Especificaciones y Requisitos** | [specs/001-red-tinkuy/spec.md](specs/001-red-tinkuy/spec.md) |
-| **Plan y Tareas** | [specs/001-red-tinkuy/plan.md](specs/001-red-tinkuy/plan.md) |
-| **Código Principal** | `index.html` y carpeta `assets/` |
-| **Despliegue Continuo** | Vercel CI / GitHub Pages |
-| **Guion de Pitch** | [docs/pitch.md](docs/pitch.md) |
+| Fase | Documento de Referencia |
+| :--- | :--- |
+| **Diagnóstico y Problemática** | Documentado en la sección superior a partir del informe Senaju (2022) |
+| **Especificaciones y Criterios (EARS)** | [`specs/001-red-tinkuy/spec.md`](specs/001-red-tinkuy/spec.md) |
+| **Plan de Implementación Técnica** | [`specs/001-red-tinkuy/plan.md`](specs/001-red-tinkuy/plan.md) |
+| **Desglose de Tareas por Área** | [`specs/001-red-tinkuy/tasks.md`](specs/001-red-tinkuy/tasks.md) |
+| **Guion de Pitch (5 minutos)** | [`docs/pitch.md`](docs/pitch.md) |
 
 ---
 
-## 👥 Equipo
+## 📅 Fechas Clave del Evento
 
-Equipo multidisciplinario del **Warmi Innovathon 2026**:
-
-| Nombre | Rol / Especialidad | Responsabilidades en el proyecto | GitHub |
-|---|---|---|---|
-| **Dayelin Xiomara** | Líder Técnica / Frontend Developer | Arquitectura web, desarrollo responsive, integración de vistas y despliegue Vercel | [@DayelinXiomaa](https://github.com/DayelinXiomaa) |
-| **Kely Isabel** | UX Research & Validación de Impacto | Investigación de usuarias, diseño de encuestas en Lima/Junín y propuesta social | — |
-| **Equipo Red Tinkuy** | Negocio & Pitch | Modelo de sostenibilidad, propuesta de valor para empresas y preparación de la presentación final | — |
+* **Jueves 12 de noviembre:** Capacitación 1 (virtual) – Ideación y definición del problema.
+* **Viernes 13 de noviembre:** Capacitación 2 (virtual) – Desarrollo técnico con GitHub e IA.
+* **Sábado 14 de noviembre:** Capacitación 3 (virtual) – Modelo de negocio y pitch.
+* **Domingo 15 de noviembre, 11:59 p. m.:** Entrega oficial de repositorio y demo en vivo.
+* **Lunes 16 de noviembre, 3:00 a 7:00 p. m.:** **Final presencial en las oficinas de Microsoft** (Ajustes, pitch de 5 minutos ante el jurado y premiación).
 
 ---
 
-## 📅 Fechas clave del evento
+## ✅ Checklist de Entrega
 
-| Fecha | Hito |
-|---|---|
-| Jueves 12 de noviembre | Capacitación 1 (virtual): Ideación y definición del problema |
-| Viernes 13 de noviembre | Capacitación 2 (virtual): Desarrollo técnico con GitHub e IA |
-| Sábado 14 de noviembre | Capacitación 3 (virtual): Modelo de negocio y pitch |
-| **Domingo 15, 11:59 p. m.** | **Entrega oficial: Repositorio GitHub y demo desplegada** |
-| **Lunes 16, 3:00 a 7:00 p. m.** | **Final presencial en las oficinas de Microsoft:** Ajustes, pitch de 5 minutos ante el jurado y premiación |
-
----
-
-## ✅ Checklist de entrega
-
-- [x] **README completo:** Problema validado, solución, demo en vivo, tecnologías y equipo.
-- [x] **Rama `main` operativa:** Probada, limpia y ejecutable en cualquier máquina.
-- [x] **Especificaciones técnicas:** Carpeta `specs/` documentando requisitos funcionales (RF).
-- [x] **Demo publicada:** Desplegada en Vercel con certificado SSL y accesible vía web y móvil.
-- [x] **Privacidad y Seguridad:** Sin credenciales expuestas y con cláusulas de la Ley N° 29733.
-- [x] **Repositorio público:** Abierto para revisión del jurado y la comunidad.
-- [x] **Documento de Pitch listo:** [`docs/pitch.md`](docs/pitch.md) preparado para la sustentación presencial de 5 minutos en Microsoft.
+- [x] **README completo:** Diagnóstico Senaju 2022, encuesta de 20 casos, solución, equipo del Grupo 9 y enlaces.
+- [x] **Rama `main` operativa:** Probada, limpia y funcional sin errores.
+- [x] **Especificaciones completas:** Carpeta `specs/001-red-tinkuy/` con `spec.md`, `plan.md` y `tasks.md`.
+- [x] **Demo en producción:** Desplegada en Vercel ([red-tinkuy.vercel.app](https://red-tinkuy.vercel.app)) con SSL.
+- [x] **Protección de Datos:** Cumplimiento de la Ley N° 29733 de Protección de Datos Personales.
+- [x] **Guion de Pitch listo:** [`docs/pitch.md`](docs/pitch.md) preparado para la sustentación de 5 minutos en Microsoft.

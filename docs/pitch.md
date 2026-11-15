@@ -1,45 +1,52 @@
 # Guion de Pitch - Red Tinkuy (5 minutos)
 
-> **Evento:** Warmi Innovathon 2026 (Lead at Ulima & Makipuray)  
-> **Final Presencial:** Oficinas de Microsoft (Lunes 16 de noviembre)  
+> **Evento:** Warmi Innovathon 2026 (Organizado por Lead at Ulima & Makipuray, con GitHub como aliado técnico)  
+> **Equipo:** Grupo 9 (Red Tinkuy)  
+> **Final Presencial:** Oficinas de Microsoft (Lunes 16 de noviembre, 3:00 a 7:00 p. m.)  
 > **Formato:** 5 minutos de pitch + demo en vivo, 3 minutos de preguntas del jurado.  
-> **Demo en vivo:** [https://red-tinkuy.vercel.app](https://red-tinkuy.vercel.app)
+> **Demo en Producción:** [https://red-tinkuy.vercel.app](https://red-tinkuy.vercel.app)
 
 ---
 
-## 1. El problema (30 s)
-En el Perú existen cientos de colectivas y organizaciones juveniles lideradas por mujeres que generan un impacto real en sus comunidades, pero operan completamente aisladas. Al coordinar únicamente por chats de WhatsApp y hojas de cálculo sueltas, pierden tiempo y convocatorias de financiamiento. En nuestra encuesta a 20 lideresas en Lima y Junín descubrimos que el 90% no tiene cómo recaudar fondos de forma transparente y el 75% queda fuera de fondos formales por trabas burocráticas o falta de RUC.
+## 1. El Problema (45 s) — *Kely Isabel*
+"Las mujeres constituyen la base de la participación ciudadana juvenil en el Perú: representan el 61% de los integrantes de las organizaciones juveniles registradas en Senaju y el 53% de las representaciones oficiales. Sin embargo, este protagonismo se desarrolla en una profunda precariedad: el **64.4% no cuenta con personería jurídica** (sin SUNARP ni RUC) porque los costos notariales de S/ 1,000 a S/ 1,500 son inalcanzables.
 
-## 2. Nuestra solución (30 s)
-Creamos **Red Tinkuy**: una plataforma web integral donde las organizaciones juveniles lideradas por mujeres pueden visibilizarse en un mapa nacional, recaudar fondos transparentes mediante Juntta y articular alianzas estratégicas asistidas por Inteligencia Artificial, todo desde su teléfono celular.
+Además, el 53% se sostiene solo con aportes de sus propios bolsillos y el 46% con rifas. Solo el 3.5% accede a fondos públicos. En nuestra propia encuesta a 20 lideresas de Lima y Junín, el 53% confirmó que conseguir financiamiento es su mayor obstáculo y el 50% señaló como necesidad urgente conectar con otras organizaciones. Sin herramientas ni financiamiento, iniciativas valiosas se apagan antes de crecer."
 
-## 3. Propuesta de valor (45 s)
-¿Qué hace única a Red Tinkuy?
-1. **Co-postulación con IA:** Las colectivas no constituidas no son excluidas; nuestro motor de IA las conecta con ONGs grandes formalizadas (como Ubuntu) para postular juntas a fondos corporativos B2B.
-2. **Financiamiento transparente vía Juntta:** Cero comisiones retenidas por la plataforma y trazabilidad total para los donantes.
-3. **Privacidad y cumplimiento:** Primera plataforma juvenil con consentimiento informado explícito según la Ley N° 29733 de Protección de Datos Personales.
+## 2. Nuestra Solución: Red Tinkuy (45 s) — *Raphaela*
+"Para responder a esta realidad creamos **Red Tinkuy**: una plataforma web gratuita, pensada para el celular, que hace visibles y financiables las iniciativas de las lideresas jóvenes del Perú.
 
-## 4. Demo en vivo (2 minutos)
-*Mostrar [red-tinkuy.vercel.app](https://red-tinkuy.vercel.app) en pantalla:*
-1. **Paso 1 - Mapa y Directorio Nacional:** Mostramos cómo una lideresa en Cusco o Lima explora iniciativas por causa social y conecta directamente por WhatsApp.
-2. **Paso 2 - Transparencia Juntta:** Mostramos el proyecto *Warmikuna Puririsun*, su meta del 84% alcanzada y cómo cualquier ciudadano puede aportar con trazabilidad directa.
-3. **Paso 3 - Alianzas Estratégicas:** Ejecutamos la coincidencia de IA que redacta el borrador del convenio entre la colectiva y la ONG madrina para un desafío de RSE empresarial.
+En Red Tinkuy tratamos **la conexión como el camino y el financiamiento como el resultado**:
+1. **Mapa Interactivo con Perfil Verificado:** No exige SUNARP ni RUC, permitiendo visibilizar a colectivas de cualquier región del país con enlace directo a sus redes y WhatsApp.
+2. **Financiamiento Transparente con Juntta:** Publican proyectos con presupuesto claro y un botón directo a Juntta con seguimiento en tiempo real, garantizando cero retenciones de dinero por nuestra parte y rendición de cuentas obligatoria.
+3. **Alianzas Estratégicas asistidas por Inteligencia Artificial:** La IA detecta complementariedades, redacta borradores formales de convenio y cruza calendarios para agendar la primera reunión de inmediato."
 
-## 5. Cómo lo construimos (45 s)
-Trabajamos bajo **Spec-Driven Development (SDD)** en GitHub:
-* Diseñamos primero la especificación formal (`specs/001-red-tinkuy/spec.md`) antes de escribir código.
-* Aplicamos ramas por funcionalidad y revisiones de código mediante Pull Requests.
-* Empleamos GitHub Copilot y asistentes de IA para acelerar el desarrollo del frontend responsivo y el despliegue automatizado en Vercel.
+## 3. Demo en Vivo (2 minutos) — *Dayelin Xiomara*
+*(Mostrando [red-tinkuy.vercel.app](https://red-tinkuy.vercel.app) proyectado en pantalla)*
 
-## 6. Qué sigue (30 s)
-Para la versión oficial, conectaremos este prototipo validado a una base de datos PostgreSQL en la nube, integraremos la API de consulta RUC de SUNAT para validación automática y habilitaremos la pasarela de pagos oficial de Juntta con Yape y Plin en tiempo real.
+1. **Mapa Nacional y Filtro de Causas (40 s):**  
+   "Navegamos por el mapa interactivo del Perú. Al seleccionar Cusco o Lima y filtrar por 'Género y Liderazgo', vemos las iniciativas activas, sus necesidades puntuales y acceso directo a WhatsApp con un solo clic."
+2. **Financiamiento Transparente Juntta (40 s):**  
+   "Ingresamos a la tarjeta del proyecto *Warmikuna Puririsun*. Cualquier donante o empresa puede ver el 84% de recaudación en vivo, el presupuesto transparente y aportar directamente mediante Yape, Plin o tarjeta."
+3. **Alianzas con IA y Organizador de Horarios (40 s):**  
+   "Activamos el motor de alianzas: la IA analiza a una colectiva de Huancayo y una de Lima, redacta el borrador formal de postulación conjunta y cruza sus calendarios para fijar la reunión de trabajo sin largas cadenas de mensajes."
+
+## 4. Viabilidad Técnica, Costos y Modelo de Negocio (1 min) — *Gianluca Talavera & Raphaela*
+* **Gianluca (Arquitectura y Costos):**  
+  "Desarrollamos una arquitectura frontend ultraligera en HTML5/CSS3/JS sin dependencias pesadas para que cargue en 2 segundos en cualquier celular económico. La IA en el piloto tiene **costo S/ 0.00** gracias a los tiers gratuitos de Google/OpenAI (hasta 1,500 consultas diarias). La infraestructura mensual en producción ronda apenas entre S/ 45 y S/ 65 soles, haciéndola 100% viable para el ecosistema social."
+* **Raphaela (Sostenibilidad y Metas del Piloto):**  
+  "Red Tinkuy es gratuita para las colectivas. Se autosostiene a través del portal de empresas aliadas que buscan proyectos auditados para sus metas de Responsabilidad Social y cumplimiento ESG. Nuestras metas de enero a marzo son validar 20 organizaciones de 3 regiones, 5 proyectos en Juntta y 10 alianzas concretadas."
+
+## 5. Cierre (30 s) — *Equipo Completo*
+"Red Tinkuy no es solo tecnología: es el puente que transforma el entusiasmo voluntario de las mujeres jóvenes en proyectos sostenibles, auditables y con impacto nacional. Muchas gracias."
 
 ---
 
-## Roles de presentación
+## Reparto del Equipo (Grupo 9)
 
-| Sección | Quién presenta | Tiempo estimado |
-| :--- | :--- | :--- |
-| **Problema y Solución** | Kely Isabel | 1:00 min |
-| **Demo en vivo interactiva** | Dayelin Xiomara | 2:00 min |
-| **Propuesta de valor, Metodología y Cierre** | Equipo Red Tinkuy | 2:00 min |
+| Integrante | Rol en la Presentación |
+| :--- | :--- |
+| **Kely Isabel** | Problema, datos Senaju 2022 y hallazgos de encuesta de campo |
+| **Raphaela** | Solución, propuesta de valor y modelo de sostenibilidad |
+| **Dayelin Xiomara** | Demo en vivo de la plataforma desplegada en Vercel |
+| **Gianluca Talavera** | Arquitectura técnica, costos de desarrollo y viabilidad |
