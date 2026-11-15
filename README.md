@@ -97,7 +97,7 @@ Equipo multidisciplinario de `[3 o 4]` integrantes.
 |---|---|---|---|---|
 | Dayelin Xiomara | `[carrera]` | Desarrollador | `[tareas]` | [@DayelinXiomaa](https://github.com/DayelinXiomaa) |
 | `[nombre]` | `[carrera]` | `[área]` | `[tareas]` | `[usuario]` |
-| `[nombre]` | `[carrera]` | `[área]` | `[tareas]` | `[usuario]` |
+| Kely Isabel | `[carrera]` | `[área]` | `[tareas]` | `[usuario]` |
 
 ## Cómo trabajamos
 
