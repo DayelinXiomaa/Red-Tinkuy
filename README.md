@@ -2,7 +2,9 @@
 
 **Una plataforma web para que las organizaciones juveniles lideradas por mujeres se comuniquen, se financien y se organicen en un solo lugar.**
 
-Warmi Innovathon 2026 · Reto de la ONG Ubuntu · Equipo: `[nombre del equipo]` · Demo: `[enlace pendiente]`
+Warmi Innovathon 2026 · Reto de la ONG · Equipo: `[nombre del equipo]` · Demo: `[enlace a GitHub Pages pendiente]`
+
+Evento organizado por Lead at Ulima y Makipuray, con la ONG como autora del reto y GitHub como aliado técnico.
 
 ## El problema
 
@@ -29,7 +31,7 @@ Un sitio web con cuatro herramientas pensadas para organizaciones pequeñas y co
 
 ## Demo
 
-`[enlace a la demo]`
+`[enlace a GitHub Pages]`
 
 Pruébala en 3 pasos:
 
@@ -58,6 +60,10 @@ El detalle está en `specs/001-[nombre]/spec.md`.
 | Despliegue | GitHub Pages con GitHub Actions |
 | IA | GitHub Copilot + MCP de GitHub |
 
+## Uso de IA y originalidad
+
+Usamos IA de forma responsable como apoyo en la ideación, la programación y el desarrollo (GitHub Copilot y agentes con roles definidos). La idea, las decisiones y la revisión de cada cambio son del equipo: la IA propone, una persona decide. La solución es original y se desarrolló dentro del marco del evento.
+
 ## Cómo ejecutarlo
 
 ```bash
@@ -85,11 +91,13 @@ Usamos Spec-Driven Development: primero acordamos qué construir en una spec, y 
 
 ## Equipo
 
-| Nombre | Lidera | Tareas | GitHub |
-|---|---|---|---|
-| Dayelin Xiomaa | `[área]` | `[tareas]` | [@DayelinXiomaa](https://github.com/DayelinXiomaa) |
-| `[nombre]` | `[área]` | `[tareas]` | `[usuario]` |
-| `[nombre]` | `[área]` | `[tareas]` | `[usuario]` |
+Equipo multidisciplinario de `[3 o 4]` integrantes.
+
+| Nombre | Carrera | Lidera | Tareas | GitHub |
+|---|---|---|---|---|
+| Dayelin Xiomara | `[carrera]` | Desarrollador | `[tareas]` | [@DayelinXiomaa](https://github.com/DayelinXiomaa) |
+| `[nombre]` | `[carrera]` | `[área]` | `[tareas]` | `[usuario]` |
+| `[nombre]` | `[carrera]` | `[área]` | `[tareas]` | `[usuario]` |
 
 ## Cómo trabajamos
 
@@ -99,13 +107,26 @@ Usamos Spec-Driven Development: primero acordamos qué construir en una spec, y 
 
 Reglas completas: [CONTRIBUTING.md](CONTRIBUTING.md) para personas y [AGENTS.md](AGENTS.md) para la IA.
 
-## Checklist de entrega (domingo 15, 11:59 p. m.)
+## Fechas clave
+
+| Fecha | Qué pasa |
+|---|---|
+| Jueves 12 de noviembre | Capacitación 1 (virtual): ideación y definición del problema |
+| Viernes 13 de noviembre | Capacitación 2 (virtual): desarrollo técnico con GitHub e IA |
+| Sábado 14 de noviembre | Capacitación 3 (virtual): modelo de negocio y pitch |
+| **Domingo 15, 11:59 p. m.** | Entrega: repo y enlace a GitHub Pages |
+| **Lunes 16, 3:00 a 7:00 p. m.** | Final presencial en las oficinas de Microsoft: ajustes, pitch de 5 minutos ante el jurado y premiación |
+
+## Checklist de entrega
 
 - [ ] README completo (problema, solución, demo, equipo)
 - [ ] `main` funciona: se puede clonar y ejecutar con los pasos de arriba
 - [ ] Cada requisito de la spec tiene su prueba y la CI está en verde
 - [ ] Todas las integrantes tienen al menos un PR revisado y fusionado
-- [ ] Enlace a la demo funcionando
+- [ ] Demo publicada en GitHub Pages y funcionando
 - [ ] Sin contraseñas, claves ni datos personales reales en el repo
 - [ ] Repositorio público
-- [ ] `docs/pitch.md` listo para la final del lunes 16
+- [ ] `docs/pitch.md` listo: pitch de 5 minutos
+- [ ] Equipo cumple las bases: 3 a 4 integrantes, al menos 2 carreras, mínimo 50 % mujeres
+- [ ] Asistencia acumulada de al menos 75 % del equipo
+- [ ] Laptop con cargador para el lunes 16
