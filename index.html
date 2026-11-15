@@ -1997,25 +1997,27 @@ footer {
 .feature-card-carousel {
   position: absolute;
   width: clamp(310px, 42vw, 450px);
-  min-height: 310px;
+  min-height: 280px;
   background: #141216; /* Gris casi negro */
-  border: 1.5px solid #2b2431;
+  border: 1px solid rgba(255, 255, 255, 0.08); /* Borde neutro sutil sin linea morada */
   border-radius: 22px;
-  padding: 32px 30px;
+  padding: 36px 30px;
   color: #ffffff; /* Letras blancas */
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
-  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.45s ease, filter 0.45s ease, border-color 0.45s ease, box-shadow 0.45s ease;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.45s ease, filter 0.45s ease;
   cursor: pointer;
   user-select: none;
   display: flex;
   flex-direction: column;
+  text-align: center; /* Todo el texto centrado */
+  align-items: center;
 }
 .feature-card-carousel.card-active {
   transform: translateX(0) scale(1);
   opacity: 1;
   z-index: 10;
-  border-color: #bb42b0;
-  box-shadow: 0 22px 50px rgba(109, 40, 103, 0.45), 0 0 0 1px rgba(217, 119, 226, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.12); /* Sin borde de linea morada */
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.55); /* Sombra limpia neutra, sin iluminacion morada */
   filter: brightness(1);
 }
 .feature-card-carousel.card-prev {
@@ -2055,18 +2057,22 @@ footer {
   margin-bottom: 18px;
 }
 .feature-card-carousel h3 {
-  color: #d977e2; /* Titulo en morado caracteristico Red Tinkuy */
-  font-size: 20px;
+  color: #d977e2; /* Titulo en morado Red Tinkuy */
+  font-size: 19px;
   font-weight: 800;
-  line-height: 1.3;
-  margin-bottom: 12px;
+  line-height: 1.35;
+  margin-bottom: 16px;
+  text-align: center;
+  text-transform: uppercase; /* EN MAYUSCULAS */
+  letter-spacing: 0.02em;
 }
 .feature-card-carousel p {
   color: #ffffff; /* Letras blancas */
   opacity: 0.92;
   font-size: 14.5px;
   line-height: 1.65;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
+  text-align: center; /* Centrado */
   flex-grow: 1;
 }
 .feature-card-carousel .feature-tag {
@@ -2075,7 +2081,10 @@ footer {
   font-weight: 700;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  text-align: center; /* Centrado */
   gap: 6px;
+  margin-top: auto;
 }
 
 /* CONTROLES / FLECHAS */
@@ -2321,8 +2330,7 @@ footer {
         <div class="features-carousel-stage" id="featuresCarouselStage">
           <!-- CARD 1 -->
           <div class="feature-card-carousel" onclick="goToFeatureIndex(0)" data-index="0">
-            <div class="feature-icon">🗺️</div>
-            <h3>1. Mapa Interactivo & Perfil Verificado</h3>
+            <h3>1. MAPA INTERACTIVO & PERFIL VERIFICADO</h3>
             <p>
               Encuentra y sé visible en tu región. Filtra por causas, necesidades y capacidades. Cada perfil reúne fotos, calendario de eventos, WhatsApp directo y el sello de formalidad verificada.
             </p>
@@ -2331,8 +2339,7 @@ footer {
 
           <!-- CARD 2 -->
           <div class="feature-card-carousel" onclick="goToFeatureIndex(1)" data-index="1">
-            <div class="feature-icon">💳</div>
-            <h3>2. Financiamiento Transparente con Juntta</h3>
+            <h3>2. FINANCIAMIENTO TRANSPARENTE CON JUNTTA</h3>
             <p>
               Publica tus proyectos con metas y presupuesto claro. El botón de aportes redirige a Juntta para donaciones con seguimiento en tiempo real. Cero retenciones por Red Tinkuy y reportes transparentes de gastos.
             </p>
@@ -2341,8 +2348,7 @@ footer {
 
           <!-- CARD 3 -->
           <div class="feature-card-carousel" onclick="goToFeatureIndex(2)" data-index="2">
-            <div class="feature-icon">🤖</div>
-            <h3>3. Alianzas Estratégicas con Inteligencia Artificial</h3>
+            <h3>3. ALIANZAS ESTRATÉGICAS CON INTELIGENCIA ARTIFICIAL</h3>
             <p>
               Nuestro motor de IA analiza tu misión, beneficiarios y necesidades para sugerirte organizaciones compatibles. Redacta borradores formales de alianza y sincroniza agendas automáticamente.
             </p>
@@ -2351,8 +2357,7 @@ footer {
 
           <!-- CARD 4 -->
           <div class="feature-card-carousel" onclick="goToFeatureIndex(3)" data-index="3">
-            <div class="feature-icon">🗓️</div>
-            <h3>4. Calendario Propio y Cruzado de Eventos</h3>
+            <h3>4. CALENDARIO PROPIO Y CRUZADO DE EVENTOS</h3>
             <p>
               Difunde tus talleres, asambleas y foros. Identifica cuándo dos organizaciones tienen disponibilidad compartida para evitar largas cadenas de correos y coordinaciones fallidas.
             </p>
@@ -2361,8 +2366,7 @@ footer {
 
           <!-- CARD 5 -->
           <div class="feature-card-carousel" onclick="goToFeatureIndex(4)" data-index="4">
-            <div class="feature-icon">📢</div>
-            <h3>5. Tablón de Fondos y Convocatorias 2026-2027</h3>
+            <h3>5. TABLÓN DE FONDOS Y CONVOCATORIAS 2026-2027</h3>
             <p>
               Accede a fondos concursables, convocatorias de cooperación internacional (APCI), becas SENAJU y programas de RSE corporativa abiertos para organizaciones peruanas.
             </p>
@@ -2371,8 +2375,7 @@ footer {
 
           <!-- CARD 6 -->
           <div class="feature-card-carousel" onclick="goToFeatureIndex(5)" data-index="5">
-            <div class="feature-icon">🛡️</div>
-            <h3>6. Reputación y Validación Formal</h3>
+            <h3>6. REPUTACIÓN Y VALIDACIÓN FORMAL</h3>
             <p>
               Gana credibilidad ante la cooperación y el Estado registrando tus datos SUNARP, RENOJ-SENAJU o APCI. Tu constancia de actividad genera confianza comprobable.
             </p>
