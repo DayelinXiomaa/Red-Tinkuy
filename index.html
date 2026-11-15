@@ -211,7 +211,7 @@ header {
 /* PUBLIC INFORMATIVE PANEL / LANDING */
 .hero-section {
   position: relative;
-  padding: 70px 0 50px;
+  padding: 14px 0 36px;
   background: #ffffff; border-bottom: 1px solid var(--border-light);
   overflow: hidden;
 }
@@ -366,6 +366,17 @@ header {
   gap: 16px;
   width: 100%;
 }
+@keyframes heroSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-45px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .hero-photo-container {
   position: relative;
   border-radius: 20px;
@@ -373,6 +384,8 @@ header {
   border: 1.5px solid var(--border-light);
   background: #FAF6FA;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+  animation: heroSlideDown 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
 }
 .hero-photo-container img {
   width: 100%;
@@ -3775,7 +3788,13 @@ function closeMobileNav() {
 }
 
 function showPublicLanding() {
-  const nl = document.querySelector(".nav-links"); if (nl) nl.classList.remove("open");
+  if (typeof closeMobileNav === 'function') closeMobileNav();
+  const heroPhoto = document.querySelector('.hero-photo-container');
+  if (heroPhoto) {
+    heroPhoto.style.animation = 'none';
+    void heroPhoto.offsetWidth;
+    heroPhoto.style.animation = 'heroSlideDown 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards';
+  }
   const empBtn = document.getElementById('nav-btn-empresas');
   if (empBtn) {
     empBtn.style.background = 'transparent';
