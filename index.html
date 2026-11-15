@@ -1974,6 +1974,192 @@ footer {
     display: none;
   }
 }
+
+/* ========================================== */
+/* FEATURES 3D COVERFLOW CAROUSEL             */
+/* ========================================== */
+.features-carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 36px auto 0;
+  padding: 10px 0 20px;
+}
+.features-carousel-stage {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.feature-card-carousel {
+  position: absolute;
+  width: clamp(310px, 42vw, 450px);
+  min-height: 310px;
+  background: #141216; /* Gris casi negro */
+  border: 1.5px solid #2b2431;
+  border-radius: 22px;
+  padding: 32px 30px;
+  color: #ffffff; /* Letras blancas */
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.45s ease, filter 0.45s ease, border-color 0.45s ease, box-shadow 0.45s ease;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+}
+.feature-card-carousel.card-active {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  z-index: 10;
+  border-color: #bb42b0;
+  box-shadow: 0 22px 50px rgba(109, 40, 103, 0.45), 0 0 0 1px rgba(217, 119, 226, 0.35);
+  filter: brightness(1);
+}
+.feature-card-carousel.card-prev {
+  transform: translateX(-60%) scale(0.85);
+  opacity: 0.65;
+  z-index: 5;
+  filter: brightness(0.72);
+}
+.feature-card-carousel.card-next {
+  transform: translateX(60%) scale(0.85);
+  opacity: 0.65;
+  z-index: 5;
+  filter: brightness(0.72);
+}
+.feature-card-carousel.card-hidden-left {
+  transform: translateX(-120%) scale(0.7);
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.feature-card-carousel.card-hidden-right {
+  transform: translateX(120%) scale(0.7);
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.feature-card-carousel .feature-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(168, 56, 158, 0.22);
+  border: 1.5px solid rgba(217, 119, 226, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 18px;
+}
+.feature-card-carousel h3 {
+  color: #d977e2; /* Titulo en morado caracteristico Red Tinkuy */
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+.feature-card-carousel p {
+  color: #ffffff; /* Letras blancas */
+  opacity: 0.92;
+  font-size: 14.5px;
+  line-height: 1.65;
+  margin-bottom: 22px;
+  flex-grow: 1;
+}
+.feature-card-carousel .feature-tag {
+  color: #f1b3f3;
+  font-size: 13px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* CONTROLES / FLECHAS */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1.5px solid var(--border-light);
+  color: var(--primary);
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+.carousel-btn:hover {
+  background: var(--primary);
+  color: #ffffff;
+  transform: translateY(-50%) scale(1.08);
+}
+.carousel-btn.btn-prev {
+  left: 14px;
+}
+.carousel-btn.btn-next {
+  right: 14px;
+}
+
+/* INDICADORES / DOTS */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+}
+.feature-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  background: #d4c8d6;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  padding: 0;
+}
+.feature-dot.active {
+  width: 32px;
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .features-carousel-stage {
+    height: 450px;
+  }
+  .feature-card-carousel {
+    width: clamp(280px, 78vw, 360px);
+    padding: 26px 20px;
+  }
+  .feature-card-carousel.card-prev {
+    transform: translateX(-48%) scale(0.82);
+    opacity: 0.35;
+  }
+  .feature-card-carousel.card-next {
+    transform: translateX(48%) scale(0.82);
+    opacity: 0.35;
+  }
+  .carousel-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+  }
+  .carousel-btn.btn-prev { left: 4px; }
+  .carousel-btn.btn-next { right: 4px; }
+}
+
 </style>
 </head>
 <body>
@@ -2126,59 +2312,82 @@ footer {
         </p>
       </div>
 
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">🗺️</div>
-          <h3>1. Mapa Interactivo & Perfil Verificado</h3>
-          <p>
-            Encuentra y sé visible en tu región. Filtra por causas, necesidades y capacidades. Cada perfil reúne fotos, calendario de eventos, WhatsApp directo y el sello de formalidad verificada.
-          </p>
-          <span class="feature-tag">Explora por causa, no solo cercanía →</span>
+      <div class="features-carousel-container">
+        <!-- BOTONES DE NAVEGACION -->
+        <button class="carousel-btn btn-prev" onclick="moveFeaturesCarousel(-1)" aria-label="Tarjeta anterior">❮</button>
+        <button class="carousel-btn btn-next" onclick="moveFeaturesCarousel(1)" aria-label="Siguiente tarjeta">❯</button>
+
+        <!-- ESCENARIO DEL CAROUSEL -->
+        <div class="features-carousel-stage" id="featuresCarouselStage">
+          <!-- CARD 1 -->
+          <div class="feature-card-carousel" onclick="goToFeatureIndex(0)" data-index="0">
+            <div class="feature-icon">🗺️</div>
+            <h3>1. Mapa Interactivo & Perfil Verificado</h3>
+            <p>
+              Encuentra y sé visible en tu región. Filtra por causas, necesidades y capacidades. Cada perfil reúne fotos, calendario de eventos, WhatsApp directo y el sello de formalidad verificada.
+            </p>
+            <span class="feature-tag">Explora por causa, no solo cercanía →</span>
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="feature-card-carousel" onclick="goToFeatureIndex(1)" data-index="1">
+            <div class="feature-icon">💳</div>
+            <h3>2. Financiamiento Transparente con Juntta</h3>
+            <p>
+              Publica tus proyectos con metas y presupuesto claro. El botón de aportes redirige a Juntta para donaciones con seguimiento en tiempo real. Cero retenciones por Red Tinkuy y reportes transparentes de gastos.
+            </p>
+            <span class="feature-tag">Confianza garantizada para donantes →</span>
+          </div>
+
+          <!-- CARD 3 -->
+          <div class="feature-card-carousel" onclick="goToFeatureIndex(2)" data-index="2">
+            <div class="feature-icon">🤖</div>
+            <h3>3. Alianzas Estratégicas con Inteligencia Artificial</h3>
+            <p>
+              Nuestro motor de IA analiza tu misión, beneficiarios y necesidades para sugerirte organizaciones compatibles. Redacta borradores formales de alianza y sincroniza agendas automáticamente.
+            </p>
+            <span class="feature-tag">De la propuesta a la reunión en minutos →</span>
+          </div>
+
+          <!-- CARD 4 -->
+          <div class="feature-card-carousel" onclick="goToFeatureIndex(3)" data-index="3">
+            <div class="feature-icon">🗓️</div>
+            <h3>4. Calendario Propio y Cruzado de Eventos</h3>
+            <p>
+              Difunde tus talleres, asambleas y foros. Identifica cuándo dos organizaciones tienen disponibilidad compartida para evitar largas cadenas de correos y coordinaciones fallidas.
+            </p>
+            <span class="feature-tag">Agenda articulada nacional →</span>
+          </div>
+
+          <!-- CARD 5 -->
+          <div class="feature-card-carousel" onclick="goToFeatureIndex(4)" data-index="4">
+            <div class="feature-icon">📢</div>
+            <h3>5. Tablón de Fondos y Convocatorias 2026-2027</h3>
+            <p>
+              Accede a fondos concursables, convocatorias de cooperación internacional (APCI), becas SENAJU y programas de RSE corporativa abiertos para organizaciones peruanas.
+            </p>
+            <span class="feature-tag">Oportunidades actualizadas semanalmente →</span>
+          </div>
+
+          <!-- CARD 6 -->
+          <div class="feature-card-carousel" onclick="goToFeatureIndex(5)" data-index="5">
+            <div class="feature-icon">🛡️</div>
+            <h3>6. Reputación y Validación Formal</h3>
+            <p>
+              Gana credibilidad ante la cooperación y el Estado registrando tus datos SUNARP, RENOJ-SENAJU o APCI. Tu constancia de actividad genera confianza comprobable.
+            </p>
+            <span class="feature-tag">Respaldo institucional sólido →</span>
+          </div>
         </div>
 
-        <div class="feature-card">
-          <div class="feature-icon">💳</div>
-          <h3>2. Financiamiento Transparente con Juntta</h3>
-          <p>
-            Publica tus proyectos con metas y presupuesto claro. El botón de aportes redirige a Juntta para donaciones con seguimiento en tiempo real. Cero retenciones por Red Tinkuy y reportes transparentes de gastos.
-          </p>
-          <span class="feature-tag">Confianza garantizada para donantes →</span>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">🤖</div>
-          <h3>3. Alianzas Estratégicas con Inteligencia Artificial</h3>
-          <p>
-            Nuestro motor de IA analiza tu misión, beneficiarios y necesidades para sugerirte organizaciones compatibles. Redacta borradores formales de alianza y sincroniza agendas automáticamente.
-          </p>
-          <span class="feature-tag">De la propuesta a la reunión en minutos →</span>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">📅</div>
-          <h3>4. Calendario Propio y Cruzado de Eventos</h3>
-          <p>
-            Difunde tus talleres, asambleas y foros. Identifica cuándo dos organizaciones tienen disponibilidad compartida para evitar largas cadenas de correos y coordinaciones fallidas.
-          </p>
-          <span class="feature-tag">Agenda articulada nacional →</span>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">📢</div>
-          <h3>5. Tablón de Fondos y Convocatorias 2026-2027</h3>
-          <p>
-            Accede a fondos concursables, convocatorias de cooperación internacional (APCI), becas SENAJU y programas de RSE corporativa abiertos para organizaciones peruanas.
-          </p>
-          <span class="feature-tag">Oportunidades actualizadas semanalmente →</span>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">🛡️</div>
-          <h3>6. Reputación y Validación Formal</h3>
-          <p>
-            Gana credibilidad ante la cooperación y el Estado registrando tus datos SUNARP, RENOJ-SENAJU o APCI. Tu constancia de actividad genera confianza comprobable.
-          </p>
-          <span class="feature-tag">Respaldo institucional sólido →</span>
+        <!-- INDICADORES / DOTS -->
+        <div class="carousel-dots" id="featuresDots">
+          <button class="feature-dot active" onclick="goToFeatureIndex(0)" aria-label="Ir a tarjeta 1"></button>
+          <button class="feature-dot" onclick="goToFeatureIndex(1)" aria-label="Ir a tarjeta 2"></button>
+          <button class="feature-dot" onclick="goToFeatureIndex(2)" aria-label="Ir a tarjeta 3"></button>
+          <button class="feature-dot" onclick="goToFeatureIndex(3)" aria-label="Ir a tarjeta 4"></button>
+          <button class="feature-dot" onclick="goToFeatureIndex(4)" aria-label="Ir a tarjeta 5"></button>
+          <button class="feature-dot" onclick="goToFeatureIndex(5)" aria-label="Ir a tarjeta 6"></button>
         </div>
       </div>
 
@@ -4333,6 +4542,85 @@ function showNewEventModal() {
   if (!evName) return;
   alert('Evento programado exitosamente. Ya es visible en la agenda pública de Red Tinkuy.');
 }
+
+/* ========================================== */
+/* LOGICA DE NAVEGACION CAROUSEL FEATURES     */
+/* ========================================== */
+let currentFeatureIndex = 0;
+const totalFeaturesCount = 6;
+
+function updateFeaturesCarousel() {
+  const cards = document.querySelectorAll('.feature-card-carousel');
+  const dots = document.querySelectorAll('.feature-dot');
+  if (!cards || cards.length === 0) return;
+
+  cards.forEach((card, idx) => {
+    card.classList.remove('card-active', 'card-prev', 'card-next', 'card-hidden-left', 'card-hidden-right');
+
+    let diff = (idx - currentFeatureIndex) % totalFeaturesCount;
+    if (diff > totalFeaturesCount / 2) diff -= totalFeaturesCount;
+    if (diff < -totalFeaturesCount / 2) diff += totalFeaturesCount;
+
+    if (diff === 0) {
+      card.classList.add('card-active');
+    } else if (diff === -1) {
+      card.classList.add('card-prev');
+    } else if (diff === 1) {
+      card.classList.add('card-next');
+    } else if (diff < -1) {
+      card.classList.add('card-hidden-left');
+    } else {
+      card.classList.add('card-hidden-right');
+    }
+  });
+
+  if (dots && dots.length > 0) {
+    dots.forEach((dot, idx) => {
+      if (idx === currentFeatureIndex) {
+        dot.classList.add('active');
+      } else {
+        dot.classList.remove('active');
+      }
+    });
+  }
+}
+
+function moveFeaturesCarousel(step) {
+  currentFeatureIndex = (currentFeatureIndex + step + totalFeaturesCount) % totalFeaturesCount;
+  updateFeaturesCarousel();
+}
+
+function goToFeatureIndex(idx) {
+  currentFeatureIndex = idx;
+  updateFeaturesCarousel();
+}
+
+// Touch swipe support for features carousel
+document.addEventListener('DOMContentLoaded', () => {
+  updateFeaturesCarousel();
+  const stage = document.getElementById('featuresCarouselStage');
+  if (stage) {
+    let tStartX = 0;
+    let tEndX = 0;
+    stage.addEventListener('touchstart', e => {
+      tStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    stage.addEventListener('touchend', e => {
+      tEndX = e.changedTouches[0].screenX;
+      if (tStartX - tEndX > 45) {
+        moveFeaturesCarousel(1);
+      } else if (tEndX - tStartX > 45) {
+        moveFeaturesCarousel(-1);
+      }
+    }, { passive: true });
+  }
+});
+
+// Also trigger update on first load if already loaded
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+  setTimeout(updateFeaturesCarousel, 100);
+}
+
 </script>
 </body>
 </html>
