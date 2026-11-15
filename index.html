@@ -78,7 +78,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 74px;
+  min-height: 70px;
+  padding: 8px 0;
+  gap: 12px;
 }
 .logo-box {
   display: flex;
@@ -795,10 +797,19 @@ header {
   background: var(--bg-page);
 }
 .faq-answer {
+  display: none;
   padding: 0 24px 20px;
   font-size: 14px;
   color: var(--text-muted);
   line-height: 1.6;
+  border-top: 1px dashed var(--border-light);
+  padding-top: 14px;
+}
+.faq-question span:last-child {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary);
+  transition: transform 0.2s ease;
 }
 
 /* 8. FORMULARIO CIERRE EMPRESAS */
@@ -1792,50 +1803,94 @@ footer {
   .container {
     padding: 0 16px;
   }
+  .nav-wrap {
+    min-height: 60px;
+  }
+  .brand-logo-img {
+    width: 38px;
+    height: 38px;
+  }
+  .logo-text h1 {
+    font-size: 19px;
+  }
+  .logo-text span {
+    font-size: 10px;
+    max-width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .nav-actions {
+    gap: 6px;
+    align-items: center;
+  }
+  .nav-actions .btn {
+    padding: 6px 10px;
+    font-size: 11.5px;
+  }
+  #btn-login-nav {
+    display: none; /* Hide quick login on extra small screens, accessible in menu or modal */
+  }
+  .burger-menu-btn {
+    padding: 6px 10px;
+    font-size: 18px;
+  }
   .hero-section {
-    padding: 36px 0 30px;
+    padding: 30px 0 24px;
+  }
+  .empresas-hero {
+    padding: 36px 0 28px;
+  }
+  .empresas-hero h1 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+  .empresas-hero p.lead {
+    font-size: 14.5px;
+    line-height: 1.5;
   }
   .hero-title {
-    font-size: 32px;
-    line-height: 1.15;
+    font-size: 28px;
+    line-height: 1.18;
   }
   .hero-desc {
-    font-size: 15px;
+    font-size: 14.5px;
+    line-height: 1.55;
+    margin-bottom: 22px;
   }
   .hero-photo-container img {
-    height: 280px;
+    height: 240px;
     object-position: center 10%;
   }
   .features-grid, .grants-grid, .footer-grid, .metrics-row, .steps-row, .ways-grid {
     grid-template-columns: 1fr;
   }
   .form-card {
-    padding: 20px 16px;
+    padding: 20px 14px;
   }
   .form-group.full, .privacy-consent-box {
     grid-column: span 1;
   }
-  .nav-actions {
-    gap: 6px;
-  }
-  .nav-actions .btn {
-    padding: 7px 12px;
-    font-size: 12px;
-  }
   .hero-ctas {
     flex-direction: column;
+    gap: 10px;
   }
   .hero-ctas .btn {
     width: 100%;
+    padding: 12px 18px;
   }
   .stats-bar {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
+    gap: 14px;
+  }
+  .stat-item h3 {
+    font-size: 22px;
   }
   .hero-socials-box {
     flex-direction: column;
     align-items: flex-start;
+    gap: 8px;
   }
   .app-header-bar {
     flex-direction: column;
@@ -1845,9 +1900,32 @@ footer {
   .app-nav-tabs {
     flex-wrap: nowrap;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .emp-contact-card {
+    padding: 24px 16px;
   }
   .modal-privacy-card {
-    padding: 24px 18px;
+    padding: 22px 16px;
+  }
+  .alliances-reason-box {
+    padding: 22px 16px;
+  }
+  .alliances-reason-text h3 {
+    font-size: 20px;
+  }
+  .mockup-challenge-card {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 380px) {
+  .logo-text span {
+    display: none;
+  }
+  .nav-actions .btn {
+    padding: 5px 8px;
+    font-size: 11px;
   }
 }
 </style>
@@ -3589,9 +3667,16 @@ function showEmpresasView() {
 
 function toggleFaq(btn) {
   const ans = btn.nextElementSibling;
-  const isHidden = ans.style.display === 'none';
-  ans.style.display = isHidden ? 'block' : 'none';
-  btn.querySelector('span:last-child').textContent = isHidden ? '−' : '+';
+  const isCurrentlyOpen = (ans.style.display === 'block');
+  
+  // Close all other faqs in the same accordion for clean UX
+  document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+  document.querySelectorAll('.faq-question span:last-child').forEach(s => s.textContent = '+');
+
+  if (!isCurrentlyOpen) {
+    ans.style.display = 'block';
+    btn.querySelector('span:last-child').textContent = '−';
+  }
 }
 
 function handleEmpresaContact(e) {
