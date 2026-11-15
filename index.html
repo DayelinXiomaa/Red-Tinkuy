@@ -59,9 +59,9 @@ button, input, select, textarea { font-family: inherit; }
 
 .container {
   width: 100%;
-  max-width: 1600px;
+  max-width: 1220px;
   margin: 0 auto;
-  padding: 0 clamp(20px, 3.5vw, 64px);
+  padding: 0 24px;
 }
 
 /* NAVBAR */
@@ -133,6 +133,14 @@ header {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+.desktop-only-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.mobile-nav-actions {
+  display: none;
 }
 .btn {
   display: inline-flex;
@@ -1748,29 +1756,69 @@ footer {
 }
 
 @media (max-width: 980px) {
+  .desktop-only-actions {
+    display: none !important;
+  }
   .burger-menu-btn {
-    display: inline-flex;
+    display: inline-flex !important;
     align-items: center;
     justify-content: center;
+    width: 42px;
+    height: 42px;
+    font-size: 22px;
+    border: 1.5px solid var(--border-light);
+    border-radius: 8px;
+    background: #ffffff;
+    color: var(--primary);
+    cursor: pointer;
   }
   .nav-wrap {
     position: relative;
+    justify-content: space-between;
   }
   .nav-links {
     display: none;
     position: absolute;
-    top: 74px;
+    top: 100%;
     left: 0;
     right: 0;
     background: #ffffff;
-    border-bottom: 1px solid var(--border-light);
+    border-bottom: 2px solid var(--border-light);
+    border-top: 1px solid var(--border-light);
     flex-direction: column;
     padding: 20px 24px;
-    gap: 16px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    gap: 12px;
+    box-shadow: 0 16px 36px rgba(0,0,0,0.12);
+    z-index: 1000;
   }
   .nav-links.open {
     display: flex;
+  }
+  .nav-links .nav-link {
+    font-size: 15px;
+    font-weight: 600;
+    padding: 8px 0;
+    border-bottom: 1px solid #f6eff5;
+    display: block;
+    width: 100%;
+  }
+  .mobile-nav-actions {
+    display: flex !important;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 6px;
+    padding-top: 14px;
+    border-top: 2px solid var(--border-light);
+    width: 100%;
+  }
+  .mobile-nav-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 18px;
+    font-size: 14.5px;
+    font-weight: 700;
+    border-radius: var(--radius-full);
+    text-align: center;
   }
   .hero-grid {
     grid-template-columns: 1fr;
@@ -1821,19 +1869,8 @@ footer {
     text-overflow: ellipsis;
   }
   .nav-actions {
-    gap: 6px;
+    gap: 0;
     align-items: center;
-  }
-  .nav-actions .btn {
-    padding: 6px 10px;
-    font-size: 11.5px;
-  }
-  #btn-login-nav {
-    display: none; /* Hide quick login on extra small screens, accessible in menu or modal */
-  }
-  .burger-menu-btn {
-    padding: 6px 10px;
-    font-size: 18px;
   }
   .hero-section {
     padding: 30px 0 24px;
@@ -1923,10 +1960,6 @@ footer {
   .logo-text span {
     display: none;
   }
-  .nav-actions .btn {
-    padding: 5px 8px;
-    font-size: 11px;
-  }
 }
 </style>
 </head>
@@ -1944,18 +1977,29 @@ footer {
     </div>
 
     <nav class="nav-links">
-      <a class="nav-link active" id="nav-item-inicio" onclick="showPublicLanding()">Inicio</a>
-      <a class="nav-link" onclick="openAppTab('mapa')">Mapa Nacional</a>
-      <a class="nav-link" onclick="openAppTab('financiamiento')">Financiamiento Juntta</a>
-      <a class="nav-link" onclick="openAppTab('alianzas')">Alianzas IA</a>
-      <a class="nav-link" onclick="openAppTab('convocatorias')">Convocatorias</a>
+      <a class="nav-link active" id="nav-item-inicio" onclick="showPublicLanding(); closeMobileNav();">Inicio</a>
+      <a class="nav-link" onclick="openAppTab('mapa'); closeMobileNav();">Mapa Nacional</a>
+      <a class="nav-link" onclick="openAppTab('financiamiento'); closeMobileNav();">Financiamiento Juntta</a>
+      <a class="nav-link" onclick="openAppTab('alianzas'); closeMobileNav();">Alianzas IA</a>
+      <a class="nav-link" onclick="openAppTab('convocatorias'); closeMobileNav();">Convocatorias</a>
+
+      <!-- ACCIONES DENTRO DEL MENU HAMBURGUESA MOVIL -->
+      <div class="mobile-nav-actions">
+        <button class="btn btn-outline mobile-nav-btn" style="border-color:var(--primary); color:var(--primary); font-weight:700;" onclick="showEmpresasView(); closeMobileNav();">Empresas</button>
+        <button class="btn btn-outline mobile-nav-btn" onclick="quickLogin(); closeMobileNav();">Iniciar sesión</button>
+        <button class="btn btn-primary mobile-nav-btn" onclick="showRegisterForm(); closeMobileNav();">Registrar organización</button>
+      </div>
     </nav>
 
     <div class="nav-actions">
-      <button class="btn btn-outline" id="nav-btn-empresas" style="border-color:var(--primary); color:var(--primary); font-weight:700;" onclick="showEmpresasView()">Empresas</button>
-      <button class="btn btn-outline" id="btn-login-nav" onclick="quickLogin()">Iniciar sesión</button>
-      <button class="btn btn-primary" id="btn-register-nav" onclick="showRegisterForm()">Registrar</button>
-      <button class="burger-menu-btn" onclick="toggleMobileNav()" aria-label="Abrir menú">☰</button>
+      <!-- BOTONES VISIBLES EN DESKTOP -->
+      <div class="desktop-only-actions">
+        <button class="btn btn-outline" id="nav-btn-empresas" style="border-color:var(--primary); color:var(--primary); font-weight:700;" onclick="showEmpresasView()">Empresas</button>
+        <button class="btn btn-outline" id="btn-login-nav" onclick="quickLogin()">Iniciar sesión</button>
+        <button class="btn btn-primary" id="btn-register-nav" onclick="showRegisterForm()">Registrar</button>
+      </div>
+      <!-- BOTON HAMBURGUESA VISIBLE SOLO EN MOVIL -->
+      <button class="burger-menu-btn" onclick="toggleMobileNav()" aria-label="Abrir menú" id="burger-btn">☰</button>
     </div>
   </div>
 </header>
@@ -3653,6 +3697,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // NAVEGACIÓN PRINCIPAL
 function showEmpresasView() {
+  if (typeof closeMobileNav === 'function') closeMobileNav();
   document.getElementById('view-public').style.display = 'none';
   document.getElementById('view-register').style.display = 'none';
   const ve = document.getElementById('view-empresas'); if (ve) ve.style.display = 'none';
@@ -3709,7 +3754,22 @@ function closePrivacyModalDirect() {
 
 function toggleMobileNav() {
   const nl = document.querySelector('.nav-links');
-  if (nl) nl.classList.toggle('open');
+  const btn = document.getElementById('burger-btn');
+  if (nl) {
+    nl.classList.toggle('open');
+    if (btn) {
+      btn.innerText = nl.classList.contains('open') ? '✕' : '☰';
+    }
+  }
+}
+
+function closeMobileNav() {
+  const nl = document.querySelector('.nav-links');
+  const btn = document.getElementById('burger-btn');
+  if (nl && nl.classList.contains('open')) {
+    nl.classList.remove('open');
+    if (btn) btn.innerText = '☰';
+  }
 }
 
 function showPublicLanding() {
@@ -3727,6 +3787,7 @@ function showPublicLanding() {
 }
 
 function showRegisterForm() {
+  if (typeof closeMobileNav === 'function') closeMobileNav();
   document.getElementById('view-public').style.display = 'none';
   document.getElementById('view-register').style.display = 'block';
   document.getElementById('view-app').style.display = 'none';
