@@ -2238,34 +2238,10 @@ footer {
   color: var(--primary);
   font-weight: 700;
 }
-.mobile-lang-selector {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 12px 0;
-  border-top: 1px solid var(--border-light);
-  margin-top: 6px;
-}
-.mobile-lang-selector .lang-btn-row {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-.mobile-lang-selector .lang-btn {
-  padding: 8px 16px;
-  border-radius: var(--radius-full);
-  border: 1.5px solid var(--border-light);
-  background: #ffffff;
-  color: var(--text-dark);
-  font-size: 13px;
-  font-weight: 700;
-  cursor: pointer;
-}
-.mobile-lang-selector .lang-btn.active {
-  background: var(--primary);
-  color: #ffffff;
-  border-color: var(--primary);
-}
+
+
+
+
 
 </style>
 </head>
@@ -2289,15 +2265,7 @@ footer {
       <a class="nav-link" onclick="openAppTab('alianzas'); closeMobileNav();" data-i18n="nav_alianzas">Alianzas IA</a>
       <a class="nav-link" onclick="openAppTab('convocatorias'); closeMobileNav();" data-i18n="nav_convocatorias">Convocatorias</a>
 
-      <!-- SELECTOR DE IDIOMA EN MOVIL -->
-      <div class="mobile-lang-selector">
-        <span style="font-size:12px; font-weight:700; color:var(--text-muted);">🌐 IDIOMA / SIMI / LANGUAGE:</span>
-        <div class="lang-btn-row">
-          <button class="lang-btn active" id="m-lang-es" onclick="setLanguage('es')">🇵🇪 Español</button>
-          <button class="lang-btn" id="m-lang-qu" onclick="setLanguage('qu')">🏔️ Qhichwa</button>
-          <button class="lang-btn" id="m-lang-en" onclick="setLanguage('en')">🌐 English</button>
-        </div>
-      </div>
+      
 
       <!-- ACCIONES DENTRO DEL MENU HAMBURGUESA MOVIL -->
       <div class="mobile-nav-actions">
@@ -4861,8 +4829,8 @@ function setLanguage(lang) {
   ['es', 'qu', 'en'].forEach(l => {
     const dItem = document.getElementById('d-lang-' + l);
     if (dItem) dItem.classList.toggle('active', l === lang);
-    const mItem = document.getElementById('m-lang-' + l);
-    if (mItem) mItem.classList.toggle('active', l === lang);
+    
+    
   });
 
   // Cerrar menú dropdown si estaba abierto
