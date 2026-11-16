@@ -4713,109 +4713,367 @@ if (document.readyState === 'complete' || document.readyState === 'interactive')
 }
 
 
-/* ========================================== */
-/* SISTEMA MULTI-IDIOMA (ES / QU / EN)        */
-/* ========================================== */
-const I18N = {
-  es: {
-    slogan: "Donde las iniciativas se encuentran.",
-    nav_inicio: "Inicio",
-    nav_mapa: "Mapa Nacional",
-    nav_financiamiento: "Financiamiento Juntta",
-    nav_alianzas: "Alianzas IA",
-    nav_convocatorias: "Convocatorias",
-    btn_empresas: "Empresas",
-    btn_login: "Iniciar sesión",
-    btn_register: "Registrar organización",
-    hero_title: "Donde el impacto social se encuentra y multiplica",
-    hero_desc: "Conecta tu organización con aliadas estratégicas, transparenta el financiamiento de tus proyectos a través de Juntta y utiliza inteligencia artificial para co-diseñar alianzas efectivas de forma inmediata y verificada.",
-    hero_btn_reg: "+ Registrar mi Organización",
-    hero_btn_map: "🗺️ Explorar Mapa Interactivo",
-    stat_regions: "Regiones conectadas",
-    stat_formalized: "ONGs Formalizadas",
-    stat_funds: "Canalizados vía Juntta",
-    f1_title: "1. MAPA INTERACTIVO & PERFIL VERIFICADO",
-    f2_title: "2. FINANCIAMIENTO TRANSPARENTE CON JUNTTA",
-    f3_title: "3. ALIANZAS ESTRATÉGICAS CON INTELIGENCIA ARTIFICIAL",
-    f4_title: "4. CALENDARIO PROPIO Y CRUZADO DE EVENTOS",
-    f5_title: "5. TABLÓN DE FONDOS Y CONVOCATORIAS 2026-2027",
-    f6_title: "6. REPUTACIÓN Y VALIDACIÓN FORMAL",
-    cta_title: "¿Lista para dar el siguiente paso con tu organización?",
-    tab_1: "1. Mapa Interactivo & Perfil Verificado",
-    tab_2: "2. Financiamiento Juntta",
-    tab_3: "3. Alianzas con IA",
-    tab_4: "4. Calendarios & Disponibilidad",
-    tab_5: "5. Tablón de Fondos",
-    tab_6: "6. Mi Organización & Reportes"
-  },
+
+/* ======================================================== */
+/* SISTEMA INTEGRAL MULTI-IDIOMA TOTAL (ESPAÑOL / QUECHUA / ENGLISH) */
+/* ======================================================== */
+const FULL_DICTIONARY = {
   qu: {
-    slogan: "Maypichus yuyaykuna tinkunku.",
-    nav_inicio: "Qallariy",
-    nav_mapa: "Suyunchis Mapa",
-    nav_financiamiento: "Juntta Qullqi",
-    nav_alianzas: "IA Huñunakuy",
-    nav_convocatorias: "Wakyaykuna",
-    btn_empresas: "Ruruchinakuna",
-    btn_login: "Yaykuy",
-    btn_register: "Huñunakuyta qillqay",
-    hero_title: "Maypichus llank'aykuna tinkunku hinaspapas miranku",
-    hero_desc: "Huñunakuyki allin yanapaqkunawan tinkiytatamuy, Junttawan proyectoykikunata sut'inchay, hinaspapas IA nisqawan chaypacha allin rimanakuykunata ruray.",
-    hero_btn_reg: "+ Huñunakuyniyta qillqay",
-    hero_btn_map: "🗺️ Saywiti qhaway",
-    stat_regions: "Suyukuna Tinnisqa",
-    stat_formalized: "Huñunakuykuna Kamarisqa",
-    stat_funds: "Junttawan Churasqa",
-    f1_title: "1. SAYWITI & PERFIL TINKISQA",
-    f2_title: "2. JUNTTAPAQ SUT'I QULLQI",
-    f3_title: "3. IA NISQAWAN ALLIN RIMANAKUY",
-    f4_title: "4. KIKIN WATAPACHA TUQNAPAYKUNA",
-    f5_title: "5. QULLQI WAKYAYKUNA 2026-2027",
-    f6_title: "6. ALLIN RIQSISQA KANAPAQ",
-    cta_title: "¿Allichasqachu kanki huñunakuykiwan ñawpaman purinaykipaq?",
-    tab_1: "1. Saywiti & Qillqasqa",
-    tab_2: "2. Juntta Qullqi Yanapay",
-    tab_3: "3. IA nisqawan Huñunakuy",
-    tab_4: "4. Watapacha & Tiemponchik",
-    tab_5: "5. Qullqi Mask'aykuna",
-    tab_6: "6. Huñunakuyniy & Willakuykuna"
+    // Header & Nav
+    "Donde las iniciativas se encuentran.": "Maypichus yuyaykuna tinkunku.",
+    "Inicio": "Qallariy",
+    "Mapa Nacional": "Suyunchis Mapa",
+    "Financiamiento Juntta": "Juntta Qullqi",
+    "Alianzas IA": "IA Huñunakuy",
+    "Convocatorias": "Wakyaykuna",
+    "Empresas": "Ruruchinakuna",
+    "Iniciar sesión": "Yaykuy",
+    "Registrar": "Qillqakuy",
+    "Registrar organización": "Huñunakuyta qillqay",
+    
+    // Hero
+    "Red Nacional de Organizaciones Juveniles de Mujeres": "Warmikunaq Llaqta Huñunakuyninkuna",
+    "Donde el impacto social se encuentra y multiplica": "Maypichus llank'aykuna tinkunku hinaspapas miranku",
+    "Conecta tu organización con aliadas estratégicas, transparenta el financiamiento de tus proyectos a través de Juntta y utiliza inteligencia artificial para co-diseñar alianzas efectivas de forma inmediata y verificada.": "Huñunakuyki allin yanapaqkunawan tinkiytatamuy, Junttawan proyectoykikunata sut'inchay, hinaspapas IA nisqawan chaypacha allin rimanakuykunata ruray.",
+    "Registrar mi Organización": "Huñunakuyniyta qillqay",
+    "+ Registrar mi Organización": "+ Huñunakuyniyta qillqay",
+    "Explorar Mapa Interactivo": "Saywiti qhaway",
+    "🗺️ Explorar Mapa Interactivo": "🗺️ Saywiti qhaway",
+    "Regiones conectadas": "Suyukuna Tinnisqa",
+    "REGIONES CONECTADAS": "SUYUKUNA TINNISQA",
+    "ONGs Formalizadas": "Huñunakuykuna Kamarisqa",
+    "ONGS FORMALIZADAS": "HUÑUNAKUYKUNA KAMARISQA",
+    "Canalizados vía Juntta": "Junttawan Churasqa",
+    "CANALIZADOS VÍA JUNTTA": "JUNTTAWAN CHURASQA",
+    "Únete a nuestra comunidad:": "Llaqtanchisman yaykuy:",
+    "Canal Oficial WhatsApp": "WhatsApp Oficial Willakuy",
+    "Comunidad Nacional Red Tinkuy": "Red Tinkuy Llaqta Huñunakuy",
+    "Articulación intergeneracional e intercultural en el Perú": "Perú suyupi mirachisqa kawsay",
+    "Red Verificada": "Allin Riqsisqa",
+    "✓ Red Verificada": "✓ Allin Riqsisqa",
+    "Sinergia IA detectada:": "IA tinkiynin tarisqa:",
+    "Meta: S/ 15,000 · 128 donantes activos": "Mitu: S/ 15,000 · 128 yanapaqkuna",
+    "Ver Campaña & Aportar": "Campaña Qhaway & Yanapay",
+
+    // Features Section
+    "Nuestras Herramientas": "Llank'ananchikkuna",
+    "Todo lo que ganas al registrar tu organización": "Llapa chaskisqaykikuna qillqakuspaqa",
+    "Red Tinkuy integra tecnología de punta para que las organizaciones civiles no operen como islas aisladas, sino articuladas por impacto, transparencia y cooperación.": "Red Tinkuyqa musuq tecnologiatam apamun, huñunakuykuna mana sapallanku kaspapas kuska allinta llank'anankupaq.",
+    "1. MAPA INTERACTIVO & PERFIL VERIFICADO": "1. SAYWITI & PERFIL TINKISQA",
+    "Encuentra y sé visible en tu región. Filtra por causas, necesidades y capacidades. Cada perfil reúne fotos, calendario de eventos, WhatsApp directo y el sello de formalidad verificada.": "Suyuykipi riqsichikuy. Akllay imatachus rurankiku chayman hina. Sapanka perfilpi fotoskuna, WhatsApp kachkan.",
+    "Explora por causa, no solo cercanía →": "Suyuykipi mask'ay →",
+    "2. FINANCIAMIENTO TRANSPARENTE CON JUNTTA": "2. JUNTTAPAQ SUT'I QULLQI",
+    "Publica tus proyectos con metas y presupuesto claro. El botón de aportes redirige a Juntta para donaciones con seguimiento en tiempo real. Cero retenciones por Red Tinkuy y reportes transparentes de gastos.": "Proyectoykita churay qullqi yupayninwan. Junttawan donacionkunata chaskiy sut'i willakuykunawan.",
+    "Confianza garantizada para donantes →": "Chiqaq yanapay qullqichaqkunapaq →",
+    "3. ALIANZAS ESTRATÉGICAS CON INTELIGENCIA ARTIFICIAL": "3. IA NISQAWAN ALLIN RIMANAKUY",
+    "Nuestro motor de IA analiza tu misión, beneficiarios y necesidades para sugerirte organizaciones compatibles. Redacta borradores formales de alianza y sincroniza agendas automáticamente.": "IA nisqam yanapasunki huk huñunakuykunawan tinkiytapuyta, kuska llank'anapaq qillqakunata ruraspa.",
+    "De la propuesta a la reunión en minutos →": "Tinkinakuy usqhaylla →",
+    "4. CALENDARIO PROPIO Y CRUZADO DE EVENTOS": "4. KIKIN WATAPACHA TUQNAPAYKUNA",
+    "Difunde tus talleres, asambleas y foros. Identifica cuándo dos organizaciones tienen disponibilidad compartida para evitar largas cadenas de correos y coordinaciones fallidas.": "Tinkunakuykunata, tallereskunata willakuy. Huñunakuykuna p'unchawninkuta allinta tinkichinku.",
+    "Agenda articulada nacional →": "Llaqta watapacha →",
+    "5. TABLÓN DE FONDOS Y CONVOCATORIAS 2026-2027": "5. QULLQI WAKYAYKUNA 2026-2027",
+    "Accede a fondos concursables, convocatorias de cooperación internacional (APCI), becas SENAJU y programas de RSE corporativa abiertos para organizaciones peruanas.": "Chayay concurso qullqikunaman, APCI yanapaykunaman, SENAJU becaskunamanpas.",
+    "Oportunidades actualizadas semanalmente →": "Sapa simana musuq wakyaykuna →",
+    "6. REPUTACIÓN Y VALIDACIÓN FORMAL": "6. ALLIN RIQSISQA KANAPAQ",
+    "Gana credibilidad ante la cooperación y el Estado registrando tus datos SUNARP, RENOJ-SENAJU o APCI. Tu constancia de actividad genera confianza comprobable.": "SUNARP, RENOJ-SENAJU kaqkunapi iñiyniykita hatunyachiy.",
+    "Respaldo institucional sólido →": "Kallpasapa yanapay →",
+
+    // CTA
+    "¿Lista para dar el siguiente paso con tu organización?": "¿Allichasqachu kanki huñunakuykiwan ñawpaman purinaykipaq?",
+    "El registro toma menos de 3 minutos. Ingresa tus datos formales y accede de inmediato al mapa, recaudación en Juntta y sugerencias de alianzas con IA.": "Qillqakuyqa 3 minutollatam hap'in. Yaykuchiy willakuykikunata, saywitiman, Juntta qullqi huñuyman, IA yanapaykunamanpas chayanaykipaq.",
+    "Comenzar Registro Formal Gratis →": "Qillqakuyta Qallariy Gratis →",
+
+    // Tabs
+    "Mi Organización": "Huñunakuyniy",
+    "Verificada RENOJ-SENAJU": "RENOJ-SENAJU Chaskisqa",
+    "✓ Verificada RENOJ-SENAJU": "✓ RENOJ-SENAJU Chaskisqa",
+    "Gestionar Mi Perfil": "Perfil Allichay",
+    "Publicar Proyecto Juntta": "Juntta Proyectota churay",
+    "+ Publicar Proyecto Juntta": "+ Juntta Proyectota churay",
+    "1. Mapa Interactivo & Perfil Verificado": "1. Saywiti & Qillqasqa",
+    "2. Financiamiento Juntta": "2. Juntta Qullqi Yanapay",
+    "3. Alianzas con IA": "3. IA nisqawan Huñunakuy",
+    "4. Calendarios & Disponibilidad": "4. Watapacha & Tiemponchik",
+    "5. Tablón de Fondos": "5. Qullqi Mask'aykuna",
+    "6. Mi Organización & Reportes": "6. Huñunakuyniy & Willakuykuna",
+    "En vivo": "Kawsaq",
+    "Sugerencias": "Yuyaychaykuna",
+
+    // Tab 1 Mapa
+    "Directorio Nacional de Organizaciones Juveniles": "Llaqta Huñunakuykunaq Directoriun",
+    "Filtra por región y causa para descubrir iniciativas articuladas en todo el territorio peruano.": "Suyuman causasmanpas akllay Perú suyuntinpi llank'aykunata rikunaykipaq.",
+    "Filtrar por Departamento:": "Suyuman akllay:",
+    "Todos los departamentos": "Llapan suyukuna",
+    "Todas las causas": "Llapan causakuna",
+    "Género y Liderazgo": "Warmikunaq Liderazgon",
+    "Educación y Niñez": "Yachay & Wawakuna",
+    "Medio Ambiente": "Pachamama Cuiday",
+    "Derechos Humanos": "Runapaq Derechonkuna",
+    "Verificación SUNARP / RENOJ": "SUNARP / RENOJ Chaskisqa",
+    "WhatsApp Directo": "WhatsApp Willakuy",
+
+    // Tab 2 Financiamiento
+    "Campañas y Proyectos en Juntta": "Junttapi Campañakuna & Proyectokuna",
+    "Red Tinkuy no procesa ni retiene fondos: cada donación va 100% directa y transparente a la campaña de Juntta.": "Red Tinkuyqa manam qullqita hap'inchu: sapa donacionqa 100% chiqaqllam Juntta campañaman chayan.",
+    "Publicar mi Proyecto": "Proyectoyta churay",
+    "+ Publicar mi Proyecto": "+ Proyectoyta churay",
+    "Vinculación Oficial con Juntta": "Junttawan Chiqaq Tinkisqa",
+    "Juntta es la plataforma líder peruana de recaudación y crowdfunding social con trazabilidad bancaria en tiempo real.": "Junttaqa Perú suyupi ñawpaq donaciones plataformam, bancaria trazabilidad kaqwan.",
+    "Compromiso de Transparencia": "Sut'i Willakuy Rimanakuy",
+    "Seguimiento de fondos auditables segundo a segundo.": "Qullqi puriyta qhaway sapa segundo.",
+    "Al cerrar el proyecto, la ONG sube a su perfil el reporte fotográfico y balance de gastos.": "Proyectota tukuspaqa, ONG willakuyta fotokunatawan churan.",
+    "Las empresas donantes reciben reporte de impacto deducible según normativa peruana.": "Empresas donanteskunapas comprobanteta chaskinku.",
+    "Donaciones Seguras en Juntta": "Junttapi Allin Donaciones",
+    "Donar con Yape / Plin / Tarjeta": "Yape / Plin / Tarjetawan Yanapay",
+    "Descargar Rendición de Cuentas (PDF)": "Qullqi Willakuy Urayk'achiy (PDF)",
+    "Meta:": "Mitu:",
+    "Recaudado:": "Huñusqa:",
+    "Donantes:": "Yanapaqkuna:",
+
+    // Tab 3 Alianzas IA
+    "Sinergias y Co-postulación Estratégica con IA": "IA nisqawan Kuska Postulacionkuna",
+    "Nuestro motor de inteligencia artificial cruza causas afines, capacidades complementarias y redacta propuestas conjuntas en segundos.": "IA motorqa causakunata tupachin, proyectokunata qillqan usqhaylla.",
+    "Generar Alianza IA": "IA Huñunakuyta Ruray",
+    "Sinergia Detectada": "Tinkiynin Tarisqa",
+    "Coincidencia de Misión": "Mision Tinkinakuy",
+    "Capacidades Complementarias": "Kuska Kallpakuna",
+    "Borrador Formal de Alianza": "Allin Rimanakuy Qillqasqa",
+    "Organizador de Horarios Compartidos": "Kuska Horas Allichaq",
+    "Horario óptimo de reunión acordado": "Tinkinakuy allin p'unchaw churasqa",
+    "Enviar Propuesta y Agendar": "Propuestata Apachiy & Agenday",
+
+    // Tab 4 Calendarios
+    "Agenda Compartida de la Juventud Organizada": "Llaqta Sipaskunaq Kuska Watapachan",
+    "Identifica disponibilidad cruzada, asambleas y talleres para evitar la duplicación de esfuerzos.": "P'unchawkunata qhaway tallereskunapaq ama llank'aykuna chaqrunankupaq.",
+    "Publicar Evento": "Eventota Willakuy",
+    "+ Publicar Evento": "+ Eventota Willakuy",
+
+    // Tab 5 Convocatorias
+    "Tablón Nacional de Fondos y Subvenciones": "Llaqta Qullqi Wakyaykuna",
+    "Fondos concursables abiertos, cooperación internacional y becas para organizaciones peruanas.": "Concurso qullqikuna, internacional yanapaykuna, becaskunapas.",
+    "Convocatoria Abierta": "Kichasqa Wakyay",
+    "Postular a través de Red Tinkuy": "Red Tinkuywan Postulay",
+
+    // B2B Empresas
+    "Plataforma de Inversión Social y RSE": "Ruruchinakunapaq Inversion Social Plataforma",
+    "Apoya proyectos reales de mujeres jóvenes, con resultados que puedes medir.": "Sipas warmikunaq chiqaq proyectonkuta yanapay, tupunapaq resultadokunawan.",
+    "Red Tinkuy conecta a tu empresa con proyectos verificados en las regiones donde operas. Sabes exactamente a dónde va cada sol y qué impacto logró tu marca.": "Red Tinkuyqa ruruchinaykita suyuykipi riqsisqa proyectokunawan tinkin. Yachanki maymanmi sapa sol ripun chayta.",
+    "Hablar con el Equipo B2B": "B2B Equipowan Rimay",
+    "Ver Proyectos Disponibles": "Kachkaq Proyectokunata Qhaway",
+    "Preguntas frecuentes de empresas": "Ruruchinakunaq Tapukusqanku",
+    "¿Qué garantías de transparencia ofrece Red Tinkuy?": "¿Ima confianzatam Red Tinkuy qun?",
+    "¿Podemos deducir impuestos por donar aquí?": "¿Impuestosta pisiyachiyta atiykuman donaspa?",
+    "¿Cómo eligen los proyectos que aparecen en la plataforma?": "¿Imaynatam proyectokunata akllanku?",
+    "¿Las empresas pueden financiar proyectos en regiones específicas?": "¿Ruruchinakuna suyukunapi proyectokunata yanapayta atinkuchu?",
+
+    // Formulario de Registro
+    "Registro de Organización o Colectiva": "Huñunakuyta Qillqay",
+    "Selecciona el tipo de organización:": "Huñunakuy kasta akllay:",
+    "Colectiva / Organización en Proceso de Formalización": "Colectiva / Huñunakuy mana RUC kaqwan",
+    "ONG / Asociación Formalizada": "ONG / RUC kaqwan Huñunakuy",
+    "Nombre de la Organización": "Huñunakuy Sutin",
+    "Departamento / Región": "Suyu",
+    "Causa Principal": "Hatun Causa",
+    "Correo Electrónico": "Chaski Correo",
+    "Número de Teléfono / WhatsApp": "WhatsApp Yupay",
+    "He leído y acepto la Política de Tratamiento de Datos Personales (Ley N° 29733)": "Ñawinchaniñam hinaspapas chaskinim Datos Personales Kamachikuyta (Ley N° 29733)",
+    "Completar Registro": "Qillqakuyta Tukuy",
+
+    // Modal Ley 29733
+    "Protección de Datos Personales": "Kikin Willakuykuna Cuiday",
+    "Ley N° 29733 - República del Perú": "Ley N° 29733 - Perú Suyu",
+    "Entendido y acepto": "Entiendenim & Chaskinim",
+
+    // Footer
+    "Donde las iniciativas juveniles de mujeres se encuentran, se financian y se multiplican.": "Maypichus sipas warmikunaq yuyayninkuna tinkunku, qullqichakunku hinaspapas miranku.",
+    "Navegación": "Puriykuna",
+    "Legal y Privacidad": "Kamachikuy & Cuiday",
+    "Contacto": "Rimanakuy",
+    "Términos de Uso": "Llank'anapaq Reglas",
+    "Política de Privacidad": "Willakuy Cuiday Politica",
+    "Todos los derechos reservados.": "Llapan derechokuna waqaychasqa."
   },
   en: {
-    slogan: "Where initiatives meet.",
-    nav_inicio: "Home",
-    nav_mapa: "National Map",
-    nav_financiamiento: "Juntta Funding",
-    nav_alianzas: "AI Alliances",
-    nav_convocatorias: "Opportunities",
-    btn_empresas: "Companies",
-    btn_login: "Sign In",
-    btn_register: "Register Organization",
-    hero_title: "Where social impact meets and multiplies",
-    hero_desc: "Connect your organization with strategic partners, bring transparency to project funding through Juntta, and leverage AI to co-design verified alliances instantly.",
-    hero_btn_reg: "+ Register my Organization",
-    hero_btn_map: "🗺️ Explore Interactive Map",
-    stat_regions: "Connected Regions",
-    stat_formalized: "Formalized NGOs",
-    stat_funds: "Channeled via Juntta",
-    f1_title: "1. INTERACTIVE MAP & VERIFIED PROFILE",
-    f2_title: "2. TRANSPARENT FUNDING WITH JUNTTA",
-    f3_title: "3. STRATEGIC ALLIANCES WITH AI",
-    f4_title: "4. SHARED & CROSS-EVENT CALENDAR",
-    f5_title: "5. GRANTS & OPPORTUNITIES BOARD 2026-2027",
-    f6_title: "6. FORMAL REPUTATION & VALIDATION",
-    cta_title: "Ready to take the next step with your organization?",
-    tab_1: "1. Interactive Map & Verified Profile",
-    tab_2: "2. Juntta Transparent Funding",
-    tab_3: "3. AI Strategic Alliances",
-    tab_4: "4. Calendars & Availability",
-    tab_5: "5. Grant & Funding Board",
-    tab_6: "6. My Organization & Reports"
+    // Header & Nav
+    "Donde las iniciativas se encuentran.": "Where initiatives meet.",
+    "Inicio": "Home",
+    "Mapa Nacional": "National Map",
+    "Financiamiento Juntta": "Juntta Funding",
+    "Alianzas IA": "AI Alliances",
+    "Convocatorias": "Opportunities",
+    "Empresas": "Companies",
+    "Iniciar sesión": "Sign In",
+    "Registrar": "Register",
+    "Registrar organización": "Register Organization",
+
+    // Hero
+    "Red Nacional de Organizaciones Juveniles de Mujeres": "National Network of Women-Led Youth Organizations",
+    "Donde el impacto social se encuentra y multiplica": "Where social impact meets and multiplies",
+    "Conecta tu organización con aliadas estratégicas, transparenta el financiamiento de tus proyectos a través de Juntta y utiliza inteligencia artificial para co-diseñar alianzas efectivas de forma inmediata y verificada.": "Connect your organization with strategic partners, bring transparency to project funding through Juntta, and leverage AI to co-design verified alliances instantly.",
+    "Registrar mi Organización": "Register my Organization",
+    "+ Registrar mi Organización": "+ Register my Organization",
+    "Explorar Mapa Interactivo": "Explore Interactive Map",
+    "🗺️ Explorar Mapa Interactivo": "🗺️ Explore Interactive Map",
+    "Regiones conectadas": "Connected Regions",
+    "REGIONES CONECTADAS": "CONNECTED REGIONS",
+    "ONGs Formalizadas": "Formalized NGOs",
+    "ONGS FORMALIZADAS": "FORMALIZED NGOS",
+    "Canalizados vía Juntta": "Channeled via Juntta",
+    "CANALIZADOS VÍA JUNTTA": "CHANNELED VIA JUNTTA",
+    "Únete a nuestra comunidad:": "Join our community:",
+    "Canal Oficial WhatsApp": "Official WhatsApp Channel",
+    "Comunidad Nacional Red Tinkuy": "Red Tinkuy National Community",
+    "Articulación intergeneracional e intercultural en el Perú": "Intergenerational and intercultural articulation in Peru",
+    "Red Verificada": "Verified Network",
+    "✓ Red Verificada": "✓ Verified Network",
+    "Sinergia IA detectada:": "AI Synergy detected:",
+    "Meta: S/ 15,000 · 128 donantes activos": "Goal: S/ 15,000 · 128 active donors",
+    "Ver Campaña & Aportar": "View Campaign & Donate",
+
+    // Features Section
+    "Nuestras Herramientas": "Our Core Tools",
+    "Todo lo que ganas al registrar tu organización": "Everything you gain by registering your organization",
+    "Red Tinkuy integra tecnología de punta para que las organizaciones civiles no operen como islas aisladas, sino articuladas por impacto, transparencia y cooperación.": "Red Tinkuy integrates cutting-edge technology so that civil organizations do not operate as isolated islands, but articulated through impact, transparency, and cooperation.",
+    "1. MAPA INTERACTIVO & PERFIL VERIFICADO": "1. INTERACTIVE MAP & VERIFIED PROFILE",
+    "Encuentra y sé visible en tu región. Filtra por causas, necesidades y capacidades. Cada perfil reúne fotos, calendario de eventos, WhatsApp directo y el sello de formalidad verificada.": "Get discovered and gain visibility in your region. Filter by causes, needs, and capacities. Each profile showcases photos, events, direct WhatsApp, and verified status.",
+    "Explora por causa, no solo cercanía →": "Explore by cause, not just proximity →",
+    "2. FINANCIAMIENTO TRANSPARENTE CON JUNTTA": "2. TRANSPARENT FUNDING WITH JUNTTA",
+    "Publica tus proyectos con metas y presupuesto claro. El botón de aportes redirige a Juntta para donaciones con seguimiento en tiempo real. Cero retenciones por Red Tinkuy y reportes transparentes de gastos.": "Publish your projects with clear goals and budgets. The donate button redirects to Juntta for real-time tracking. Zero deductions by Red Tinkuy and transparent expense reports.",
+    "Confianza garantizada para donantes →": "Guaranteed trust for donors →",
+    "3. ALIANZAS ESTRATÉGICAS CON INTELIGENCIA ARTIFICIAL": "3. STRATEGIC ALLIANCES WITH AI",
+    "Nuestro motor de IA analiza tu misión, beneficiarios y necesidades para sugerirte organizaciones compatibles. Redacta borradores formales de alianza y sincroniza agendas automáticamente.": "Our AI engine analyzes your mission, beneficiaries, and needs to suggest compatible organizations. Draft formal partnership agreements and sync schedules automatically.",
+    "De la propuesta a la reunión en minutos →": "From proposal to meeting in minutes →",
+    "4. CALENDARIO PROPIO Y CRUZADO DE EVENTOS": "4. SHARED & CROSS-EVENT CALENDAR",
+    "Difunde tus talleres, asambleas y foros. Identifica cuándo dos organizaciones tienen disponibilidad compartida para evitar largas cadenas de correos y coordinaciones fallidas.": "Promote your workshops, assemblies, and forums. Identify shared availability between organizations to avoid email clutter and scheduling failures.",
+    "Agenda articulada nacional →": "National articulated agenda →",
+    "5. TABLÓN DE FONDOS Y CONVOCATORIAS 2026-2027": "5. GRANTS & OPPORTUNITIES BOARD 2026-2027",
+    "Accede a fondos concursables, convocatorias de cooperación internacional (APCI), becas SENAJU y programas de RSE corporativa abiertos para organizaciones peruanas.": "Access competitive grants, international cooperation calls (APCI), SENAJU scholarships, and corporate CSR programs open to Peruvian organizations.",
+    "Oportunidades actualizadas semanalmente →": "Weekly updated opportunities →",
+    "6. REPUTACIÓN Y VALIDACIÓN FORMAL": "6. FORMAL REPUTATION & VALIDATION",
+    "Gana credibilidad ante la cooperación y el Estado registrando tus datos SUNARP, RENOJ-SENAJU o APCI. Tu constancia de actividad genera confianza comprobable.": "Build credibility with international partners and the State by recording your SUNARP, RENOJ-SENAJU, or APCI records. Activity consistency builds verifiable trust.",
+    "Respaldo institucional sólido →": "Solid institutional backing →",
+
+    // CTA
+    "¿Lista para dar el siguiente paso con tu organización?": "Ready to take the next step with your organization?",
+    "El registro toma menos de 3 minutos. Ingresa tus datos formales y accede de inmediato al mapa, recaudación en Juntta y sugerencias de alianzas con IA.": "Registration takes under 3 minutes. Enter your formal details and get instant access to the map, Juntta fundraising, and AI partner suggestions.",
+    "Comenzar Registro Formal Gratis →": "Start Free Formal Registration →",
+
+    // Tabs
+    "Mi Organización": "My Organization",
+    "Verificada RENOJ-SENAJU": "Verified RENOJ-SENAJU",
+    "✓ Verificada RENOJ-SENAJU": "✓ Verified RENOJ-SENAJU",
+    "Gestionar Mi Perfil": "Manage My Profile",
+    "Publicar Proyecto Juntta": "Publish Juntta Project",
+    "+ Publicar Proyecto Juntta": "+ Publish Juntta Project",
+    "1. Mapa Interactivo & Perfil Verificado": "1. Interactive Map & Verified Profile",
+    "2. Financiamiento Juntta": "2. Juntta Transparent Funding",
+    "3. Alianzas con IA": "3. AI Strategic Alliances",
+    "4. Calendarios & Disponibilidad": "4. Calendars & Availability",
+    "5. Tablón de Fondos": "5. Grant & Funding Board",
+    "6. Mi Organización & Reportes": "6. My Organization & Reports",
+    "En vivo": "Live",
+    "Sugerencias": "Suggestions",
+
+    // Tab 1 Mapa
+    "Directorio Nacional de Organizaciones Juveniles": "National Directory of Youth Organizations",
+    "Filtra por región y causa para descubrir iniciativas articuladas en todo el territorio peruano.": "Filter by region and cause to discover articulated initiatives across Peru.",
+    "Filtrar por Departamento:": "Filter by Department:",
+    "Todos los departamentos": "All departments",
+    "Todas las causas": "All causes",
+    "Género y Liderazgo": "Gender & Leadership",
+    "Educación y Niñez": "Education & Childhood",
+    "Medio Ambiente": "Environment & Climate",
+    "Derechos Humanos": "Human Rights",
+    "Verificación SUNARP / RENOJ": "SUNARP / RENOJ Verification",
+    "WhatsApp Directo": "Direct WhatsApp",
+
+    // Tab 2 Financiamiento
+    "Campañas y Proyectos en Juntta": "Campaigns & Projects on Juntta",
+    "Red Tinkuy no procesa ni retiene fondos: cada donación va 100% directa y transparente a la campaña de Juntta.": "Red Tinkuy does not process or withhold funds: 100% of each donation goes directly and transparently to the Juntta campaign.",
+    "Publicar mi Proyecto": "Publish my Project",
+    "+ Publicar mi Proyecto": "+ Publish my Project",
+    "Vinculación Oficial con Juntta": "Official Juntta Integration",
+    "Juntta es la plataforma líder peruana de recaudación y crowdfunding social con trazabilidad bancaria en tiempo real.": "Juntta is Peru's leading social fundraising and crowdfunding platform with real-time banking traceability.",
+    "Compromiso de Transparencia": "Transparency Commitment",
+    "Seguimiento de fondos auditables segundo a segundo.": "Second-by-second auditable fund tracking.",
+    "Al cerrar el proyecto, la ONG sube a su perfil el reporte fotográfico y balance de gastos.": "Upon project completion, the NGO uploads a photo report and expense balance.",
+    "Las empresas donantes reciben reporte de impacto deducible según normativa peruana.": "Corporate donors receive deductible impact reports under Peruvian regulations.",
+    "Donaciones Seguras en Juntta": "Secure Donations on Juntta",
+    "Donar con Yape / Plin / Tarjeta": "Donate via Yape / Plin / Card",
+    "Descargar Rendición de Cuentas (PDF)": "Download Financial Report (PDF)",
+    "Meta:": "Goal:",
+    "Recaudado:": "Raised:",
+    "Donantes:": "Donors:",
+
+    // Tab 3 Alianzas IA
+    "Sinergias y Co-postulación Estratégica con IA": "Strategic Synergies & Co-application with AI",
+    "Nuestro motor de inteligencia artificial cruza causas afines, capacidades complementarias y redacta propuestas conjuntas en segundos.": "Our AI engine matches shared causes, complementary skills, and drafts joint proposals in seconds.",
+    "Generar Alianza IA": "Generate AI Alliance",
+    "Sinergia Detectada": "Synergy Detected",
+    "Coincidencia de Misión": "Mission Match",
+    "Capacidades Complementarias": "Complementary Capabilities",
+    "Borrador Formal de Alianza": "Formal Partnership Draft",
+    "Organizador de Horarios Compartidos": "Shared Schedule Organizer",
+    "Horario óptimo de reunión acordado": "Optimal meeting time agreed",
+    "Enviar Propuesta y Agendar": "Send Proposal & Schedule",
+
+    // Tab 4 Calendarios
+    "Agenda Compartida de la Juventud Organizada": "Shared Youth Organization Agenda",
+    "Identifica disponibilidad cruzada, asambleas y talleres para evitar la duplicación de esfuerzos.": "Find cross availability, assemblies, and workshops to avoid duplicated efforts.",
+    "Publicar Evento": "Publish Event",
+    "+ Publicar Evento": "+ Publish Event",
+
+    // Tab 5 Convocatorias
+    "Tablón Nacional de Fondos y Subvenciones": "National Grants & Subsidies Board",
+    "Fondos concursables abiertos, cooperación internacional y becas para organizaciones peruanas.": "Open competitive grants, international cooperation, and scholarships for Peruvian organizations.",
+    "Convocatoria Abierta": "Open Call",
+    "Postular a través de Red Tinkuy": "Apply via Red Tinkuy",
+
+    // B2B Empresas
+    "Plataforma de Inversión Social y RSE": "Social Investment & CSR Platform",
+    "Apoya proyectos reales de mujeres jóvenes, con resultados que puedes medir.": "Support real youth women's projects with measurable results.",
+    "Red Tinkuy conecta a tu empresa con proyectos verificados en las regiones donde operas. Sabes exactamente a dónde va cada sol y qué impacto logró tu marca.": "Red Tinkuy connects your company with verified projects in your operating regions. You know exactly where every sol goes and what impact your brand achieved.",
+    "Hablar con el Equipo B2B": "Talk to the B2B Team",
+    "Ver Proyectos Disponibles": "View Available Projects",
+    "Preguntas frecuentes de empresas": "Frequently Asked Questions from Companies",
+    "¿Qué garantías de transparencia ofrece Red Tinkuy?": "What transparency guarantees does Red Tinkuy provide?",
+    "¿Podemos deducir impuestos por donar aquí?": "Can we deduct taxes for donating here?",
+    "¿Cómo eligen los proyectos que aparecen en la plataforma?": "How are projects selected on the platform?",
+    "¿Las empresas pueden financiar proyectos en regiones específicas?": "Can companies fund projects in specific regions?",
+
+    // Formulario de Registro
+    "Registro de Organización o Colectiva": "Organization or Collective Registration",
+    "Selecciona el tipo de organización:": "Select organization type:",
+    "Colectiva / Organización en Proceso de Formalización": "Collective / Organization in Formalization Process",
+    "ONG / Asociación Formalizada": "Formalized NGO / Association",
+    "Nombre de la Organización": "Organization Name",
+    "Departamento / Región": "Department / Region",
+    "Causa Principal": "Primary Cause",
+    "Correo Electrónico": "Email Address",
+    "Número de Teléfono / WhatsApp": "Phone Number / WhatsApp",
+    "He leído y acepto la Política de Tratamiento de Datos Personales (Ley N° 29733)": "I have read and accept the Personal Data Processing Policy (Law No. 29733)",
+    "Completar Registro": "Complete Registration",
+
+    // Modal Ley 29733
+    "Protección de Datos Personales": "Personal Data Protection",
+    "Ley N° 29733 - República del Perú": "Law No. 29733 - Republic of Peru",
+    "Entendido y acepto": "Understood & Accept",
+
+    // Footer
+    "Donde las iniciativas juveniles de mujeres se encuentran, se financian y se multiplican.": "Where women-led youth initiatives meet, fund, and multiply.",
+    "Navegación": "Navigation",
+    "Legal y Privacidad": "Legal & Privacy",
+    "Contacto": "Contact",
+    "Términos de Uso": "Terms of Use",
+    "Política de Privacidad": "Privacy Policy",
+    "Todos los derechos reservados.": "All rights reserved."
   }
 };
 
 let currentAppLanguage = 'es';
 
 function setLanguage(lang) {
-  if (!I18N[lang]) lang = 'es';
+  if (!FULL_DICTIONARY[lang] && lang !== 'es') lang = 'es';
   currentAppLanguage = lang;
   try {
     localStorage.setItem('red_tinkuy_lang', lang);
@@ -4829,19 +5087,78 @@ function setLanguage(lang) {
   ['es', 'qu', 'en'].forEach(l => {
     const dItem = document.getElementById('d-lang-' + l);
     if (dItem) dItem.classList.toggle('active', l === lang);
-    
-    
   });
 
   // Cerrar menú dropdown si estaba abierto
   const menu = document.getElementById('langMenu');
   if (menu) menu.classList.remove('open');
 
-  // Traducir todos los elementos con data-i18n
+  // Traducir todos los nodos de texto de la página dinámicamente
+  translateAllPageElements(lang);
+}
+
+function translateAllPageElements(lang) {
+  // 1. Recorrer árbol de nodos de texto
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+    acceptNode: function(node) {
+      if (!node.nodeValue || !node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+      const parent = node.parentElement;
+      if (!parent) return NodeFilter.FILTER_REJECT;
+      const tag = parent.tagName.toLowerCase();
+      if (tag === 'script' || tag === 'style' || tag === 'svg' || tag === 'path') return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT;
+    }
+  });
+
+  let node;
+  while ((node = walker.nextNode())) {
+    if (node._origText === undefined) {
+      node._origText = node.nodeValue;
+    }
+
+    if (lang === 'es') {
+      node.nodeValue = node._origText;
+    } else {
+      const orig = node._origText.trim();
+      const dict = FULL_DICTIONARY[lang];
+      if (dict && dict[orig]) {
+        // Reemplazar preservando espacios al inicio y final
+        const leading = node._origText.match(/^\s*/)[0];
+        const trailing = node._origText.match(/\s*$/)[0];
+        node.nodeValue = leading + dict[orig] + trailing;
+      } else if (dict) {
+        // Búsqueda por subfrase si aplica
+        let replaced = node._origText;
+        for (const [esKey, transVal] of Object.entries(dict)) {
+          if (esKey.length > 5 && replaced.includes(esKey)) {
+            replaced = replaced.split(esKey).join(transVal);
+          }
+        }
+        node.nodeValue = replaced;
+      }
+    }
+  }
+
+  // 2. Elementos con data-i18n
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (I18N[lang] && I18N[lang][key]) {
+    if (I18N && I18N[lang] && I18N[lang][key]) {
       el.textContent = I18N[lang][key];
+    }
+  });
+
+  // 3. Placeholders de inputs
+  document.querySelectorAll('input[placeholder], textarea[placeholder]').forEach(input => {
+    if (input._origPlaceholder === undefined) {
+      input._origPlaceholder = input.placeholder;
+    }
+    if (lang === 'es') {
+      input.placeholder = input._origPlaceholder;
+    } else {
+      const dict = FULL_DICTIONARY[lang];
+      if (dict && dict[input._origPlaceholder]) {
+        input.placeholder = dict[input._origPlaceholder];
+      }
     }
   });
 }
