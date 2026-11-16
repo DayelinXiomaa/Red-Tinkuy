@@ -100,9 +100,9 @@ Equipo multidisciplinario del **Warmi Innovathon 2026**:
 | Integrante | Rol en el Proyecto | Responsabilidades Principales | GitHub |
 | :--- | :--- | :--- | :--- |
 | **Dayelin Xiomara** | **Líder de Desarrollo Web** | Desarrollo íntegro de la plataforma web frontend, diseño UI/UX responsivo para celulares, carrusel 3D Coverflow, mapa SVG y despliegue CI/CD en Vercel. | [@DayelinXiomaa](https://github.com/DayelinXiomaa) |
-| **Kely Isabel** | **Investigación de Datos & Diagnóstico** | Análisis estadístico del informe Senaju 2022, diseño y aplicación de la encuesta de campo (20 casos en Lima/Junín) y validación de usuarias. | — |
-| **Raphaela** | **Modelo de Negocios & Alianzas** | Estrategia de sostenibilidad, propuesta de valor, métricas de impacto social (CSAT, retención) y articulación con empresas/aliadas. | — |
-| **Gianluca Talavera** | **Arquitectura Técnica & Costos** | Estimación de presupuesto de desarrollo, costos de infraestructura en la nube, viabilidad técnica y análisis de escalabilidad. | — |
+| **Kely Isabel** | **Investigación de Datos & Diagnóstico** | Análisis estadístico del informe Senaju 2022, diseño y aplicación de la encuesta de campo (20 casos en Lima/Junín) y validación de usuarias. | [@kelyisabelhv22-blip](https://github.com/kelyisabelhv22-blip) |
+| **Raphaela** | **Modelo de Negocios & Alianzas** | Estrategia de sostenibilidad, propuesta de valor, métricas de impacto social (CSAT, retención) y articulación con empresas/aliadas. | [@dolinsolo2-cmyk](https://github.com/dolinsolo2-cmyk) |
+| **Gianluca Talavera** | **Arquitectura Técnica & Costos** | Estimación de presupuesto de desarrollo, costos de infraestructura en la nube, viabilidad técnica y análisis de escalabilidad. | [@gianlucatalavera-dot](https://github.com/gianlucatalavera-dot) |
 
 ---
 

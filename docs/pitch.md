@@ -46,7 +46,7 @@ En Red Tinkuy tratamos **la conexión como el camino y el financiamiento como el
 
 | Integrante | Rol en la Presentación |
 | :--- | :--- |
-| **Kely Isabel** | Problema, datos Senaju 2022 y hallazgos de encuesta de campo |
-| **Raphaela** | Solución, propuesta de valor y modelo de sostenibilidad |
-| **Dayelin Xiomara** | Demo en vivo de la plataforma desplegada en Vercel |
-| **Gianluca Talavera** | Arquitectura técnica, costos de desarrollo y viabilidad |
+| **Kely Isabel** ([@kelyisabelhv22-blip](https://github.com/kelyisabelhv22-blip)) | Problema, datos Senaju 2022 y hallazgos de encuesta de campo |
+| **Raphaela** ([@dolinsolo2-cmyk](https://github.com/dolinsolo2-cmyk)) | Solución, propuesta de valor y modelo de sostenibilidad |
+| **Dayelin Xiomara** ([@DayelinXiomaa](https://github.com/DayelinXiomaa)) | Demo en vivo de la plataforma desplegada en Vercel |
+| **Gianluca Talavera** ([@gianlucatalavera-dot](https://github.com/gianlucatalavera-dot)) | Arquitectura técnica, costos de desarrollo y viabilidad |
